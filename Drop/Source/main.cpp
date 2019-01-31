@@ -1,11 +1,6 @@
-#ifndef SDL
-#define SDL
+#ifndef SDL_h
+#define SDL_h
 #include <SDL.h>
-#endif
-
-#ifndef SDL_image
-#define SDL_image
-#include <SDL_image.h>
 #endif
 
 #ifndef Game_h
@@ -13,23 +8,19 @@
 #include "Game.h"
 #endif
 
+#ifndef Window_h
+#define Window_h
+#include "Window.h"
+#endif
+
 int main(int argumentCount, char* argumentValues[])
 {
 	Drop::Game game = Drop::Game();
+	Drop::Window window = Drop::Window(640, 480);
 
-	IMG_Init(IMG_INIT_PNG);
-
-	SDL_Window* window = SDL_CreateWindow(
-		"Test window",
-		SDL_WINDOWPOS_UNDEFINED,
-		SDL_WINDOWPOS_UNDEFINED,
-		640,
-		480,
-		0
-	);
 
 	SDL_Renderer* renderer = SDL_CreateRenderer(
-		window, 
+		window.GetSDLWindow(), 
 		-1, 
 		SDL_RENDERER_ACCELERATED);
 
@@ -145,8 +136,6 @@ int main(int argumentCount, char* argumentValues[])
 
 	SDL_DestroyTexture(tilesetTexture);
 	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-	IMG_Quit();
 
 	return 0;
 }

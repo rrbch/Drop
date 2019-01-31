@@ -5,7 +5,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace DropTest
+namespace Drop_Test
 {		
 	TEST_CLASS(Game)
 	{
