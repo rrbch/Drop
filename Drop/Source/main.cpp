@@ -13,70 +13,50 @@
 #include "Window.h"
 #endif
 
+#ifndef Renderer_h
+#define Renderer_h
+#include "Renderer.h"
+#endif
+
+#ifndef Rectangle_h
+#define Rectangle_h
+#include "Rectangle.h"
+#endif
+
 int main(int argumentCount, char* argumentValues[])
 {
 	Drop::Game game = Drop::Game();
-	Drop::Window window = Drop::Window(640, 480);
+	Drop::Window window = Drop::Window(640, 480, "Drop 0.1");
+	Drop::Renderer renderer = Drop::Renderer(window.GetSDLWindow());
 
-
-	SDL_Renderer* renderer = SDL_CreateRenderer(
-		window.GetSDLWindow(), 
-		-1, 
-		SDL_RENDERER_ACCELERATED);
-
-	SDL_Texture* tilesetTexture = IMG_LoadTexture(
-		renderer,
-		"C:\\Users\\Niklas\\source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png"
-	);
+	renderer.LoadTexture("C:\\Users\\Niklas\\source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png");
 	
-	SDL_Rect targetRectangle;
-	targetRectangle.x = 16;
-	targetRectangle.y = 64;
-	targetRectangle.w = 16;
-	targetRectangle.h = 16;
-
-	SDL_Rect destinationRectangle;
-	destinationRectangle.x = 0;
-	destinationRectangle.y = 0;
-	destinationRectangle.w = 16;
-	destinationRectangle.h = 16;
+	Drop::Rectangle targetRectangle = Drop::Rectangle(16, 64, 16, 16);
+	Drop::Rectangle destinationRectangle = Drop::Rectangle(0, 0, 16, 16);
 
 	SDL_Event currentEvent;
 	bool canExecute = true;
 	while (canExecute)
 	{
-		SDL_SetRenderDrawColor(
-			renderer,
-			0,
-			0,
-			0,
-			255);
-		SDL_RenderClear(renderer);
+		renderer.SetDrawColor(0, 0, 0, 255);
+		renderer.Clear();
+	
+		renderer.SetDrawColor(255, 255, 255, 255);
 
-		SDL_SetRenderDrawColor(
-			renderer,
-			255,
-			255,
-			255,
-			255);
-		SDL_RenderCopy(
-			renderer,
-			tilesetTexture,
-			&targetRectangle,
-			&destinationRectangle
-		);
-		SDL_RenderPresent(renderer);
-
+		renderer.Copy(targetRectangle, destinationRectangle);
+		renderer.Present();
+	
 		if (SDL_PollEvent(&currentEvent) == 0)
 		{
 			continue;
 		}
-
+	
 		switch (currentEvent.key.keysym.scancode)
 		{
 			case SDL_SCANCODE_ESCAPE:
 				canExecute = false;
 				break;
+			/*
 			case SDL_SCANCODE_KP_8:
 				if (currentEvent.type == SDL_KEYDOWN)
 				{
@@ -129,13 +109,11 @@ int main(int argumentCount, char* argumentValues[])
 					destinationRectangle.y -= 16;
 				}
 				break;
+			*/
 			default:
 				continue;
 		}
 	}
-
-	SDL_DestroyTexture(tilesetTexture);
-	SDL_DestroyRenderer(renderer);
 
 	return 0;
 }

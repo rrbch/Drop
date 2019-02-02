@@ -5,25 +5,19 @@
 
 namespace Drop
 {	
-	// TODO - Window title parameter
-	Window::Window(int width, int height)
+	// Public
+	Window::Window(int width, int height, std::string title)
 	{
 		this->width = width;
 		this->height = height;
+		this->title = title;
 
-		InitializeSDLImage();
 		InitializeSDLWindow();
 	}
 
 	Window::~Window(void)
 	{
-		TerminateSDLImage();
 		DestroySDLWindow();
-	}
-
-	void Window::SetSDLWindow(SDL_Window& window)
-	{
-
 	}
 
 	SDL_Window* Window::GetSDLWindow(void)
@@ -31,21 +25,11 @@ namespace Drop
 		return sDLWindow;
 	}
 
-	void Window::InitializeSDLImage(void)
-	{
-		IMG_Init(IMG_INIT_PNG);
-	}
-
-	void Window::TerminateSDLImage(void)
-	{
-		IMG_Quit();
-	}
-
-	// TODO - Consume window title field
+	// Private
 	void Window::InitializeSDLWindow(void)
 	{
 		sDLWindow = SDL_CreateWindow(
-			"Test window",
+			title.c_str(),
 			SDL_WINDOWPOS_UNDEFINED,
 			SDL_WINDOWPOS_UNDEFINED,
 			width,

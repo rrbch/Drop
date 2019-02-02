@@ -3,9 +3,9 @@
 #include <SDL.h>
 #endif
 
-#ifndef SDL_image_h
-#define SDL_image_h
-#include <SDL_image.h>
+#ifndef std_string
+#define std_string
+#include <string>
 #endif
 
 namespace Drop
@@ -13,11 +13,9 @@ namespace Drop
 	class Window
 	{
 	public:
-		Window(int width, int height);
+		Window(int width, int height, std::string title);
 
 		~Window(void);
-
-		void SetSDLWindow(SDL_Window& window);
 
 		SDL_Window* GetSDLWindow(void);
 
@@ -26,11 +24,9 @@ namespace Drop
 
 		int height;
 
+		std::string title;
+
 		SDL_Window* sDLWindow;
-
-		void InitializeSDLImage(void);
-
-		void TerminateSDLImage(void);
 
 		void InitializeSDLWindow(void);
 
