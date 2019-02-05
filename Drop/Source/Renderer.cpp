@@ -44,12 +44,12 @@ namespace Drop
 		SDL_RenderClear(sDLRenderer);
 	}
 
-	void Renderer::Copy(Rectangle targetRectangle, Rectangle destinationRectangle)
+	void Renderer::Copy(Rectangle sourceRactangle, Rectangle destinationRectangle)
 	{
 		SDL_RenderCopy(
 			sDLRenderer,
 			loadedSDLTexture,
-			&targetRectangle.GetSDLRectangle(),
+			&sourceRactangle.GetSDLRectangle(),
 			&destinationRectangle.GetSDLRectangle()
 		);
 	}

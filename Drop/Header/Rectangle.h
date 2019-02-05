@@ -12,7 +12,24 @@ namespace Drop
 
 		SDL_Rect GetSDLRectangle(void);
 
+		int GetPositionX(void);
+
+		void SetPositionX(int positionX);
+
+		int GetPositionY(void);
+
+		void SetPositionY(int positionY);
+
+		int GetWidth(void);
+
+		void SetWidth(int width);
+
+		int GetHeight(void);
+
+		void SetHeight(int height);
+
 	private:
+
 		SDL_Rect sDLRectangle;
 	};
 }

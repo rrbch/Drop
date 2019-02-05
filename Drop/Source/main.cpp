@@ -31,7 +31,7 @@ int main(int argumentCount, char* argumentValues[])
 
 	renderer.LoadTexture("C:\\Users\\Niklas\\source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png");
 	
-	Drop::Rectangle targetRectangle = Drop::Rectangle(16, 64, 16, 16);
+	Drop::Rectangle sourceRectangle = Drop::Rectangle(16, 64, 16, 16);
 	Drop::Rectangle destinationRectangle = Drop::Rectangle(0, 0, 16, 16);
 
 	SDL_Event currentEvent;
@@ -43,7 +43,7 @@ int main(int argumentCount, char* argumentValues[])
 	
 		renderer.SetDrawColor(255, 255, 255, 255);
 
-		renderer.Copy(targetRectangle, destinationRectangle);
+		renderer.Copy(sourceRectangle, destinationRectangle);
 		renderer.Present();
 	
 		if (SDL_PollEvent(&currentEvent) == 0)
@@ -56,60 +56,58 @@ int main(int argumentCount, char* argumentValues[])
 			case SDL_SCANCODE_ESCAPE:
 				canExecute = false;
 				break;
-			/*
 			case SDL_SCANCODE_KP_8:
 				if (currentEvent.type == SDL_KEYDOWN)
 				{
-					destinationRectangle.y -= 16;
+					destinationRectangle.SetPositionY(destinationRectangle.GetPositionY() - 16);
 				}
 				break;
 			case SDL_SCANCODE_KP_9:
 				if (currentEvent.type == SDL_KEYDOWN)
 				{
-					destinationRectangle.x += 16;
-					destinationRectangle.y -= 16;
+					destinationRectangle.SetPositionX(destinationRectangle.GetPositionX() + 16);
+					destinationRectangle.SetPositionY(destinationRectangle.GetPositionY() - 16);
 				}
 				break;
 			case SDL_SCANCODE_KP_6:
 				if (currentEvent.type == SDL_KEYDOWN)
 				{
-					destinationRectangle.x += 16;
+					destinationRectangle.SetPositionX(destinationRectangle.GetPositionX() + 16);
 				}
 				break;
 			case SDL_SCANCODE_KP_3:
 				if (currentEvent.type == SDL_KEYDOWN)
 				{
-					destinationRectangle.x += 16;
-					destinationRectangle.y += 16;
+					destinationRectangle.SetPositionX(destinationRectangle.GetPositionX() + 16);
+					destinationRectangle.SetPositionY(destinationRectangle.GetPositionY() + 16);
 				}
 				break;
 			case SDL_SCANCODE_KP_2:
 				if (currentEvent.type == SDL_KEYDOWN)
 				{
-					destinationRectangle.y += 16;
+					destinationRectangle.SetPositionY(destinationRectangle.GetPositionY() + 16);
 				}
 				break;
 			case SDL_SCANCODE_KP_1:
 				if (currentEvent.type == SDL_KEYDOWN)
 				{
-					destinationRectangle.x -= 16;
-					destinationRectangle.y += 16;
+					destinationRectangle.SetPositionX(destinationRectangle.GetPositionX() - 16);
+					destinationRectangle.SetPositionY(destinationRectangle.GetPositionY() + 16);
 				}
 				break;
 			case SDL_SCANCODE_KP_4:
 				if (currentEvent.type == SDL_KEYDOWN)
 				{
-					destinationRectangle.x -= 16;
+					destinationRectangle.SetPositionX(destinationRectangle.GetPositionX() - 16);
 				}
 				break;
 			case SDL_SCANCODE_KP_7:
 				if (currentEvent.type == SDL_KEYDOWN)
 				{
-					destinationRectangle.x -= 16;
-					destinationRectangle.y -= 16;
+					destinationRectangle.SetPositionX(destinationRectangle.GetPositionX() - 16);
+					destinationRectangle.SetPositionY(destinationRectangle.GetPositionY() - 16);
 				}
 				break;
-			*/
 			default:
 				continue;
 		}
