@@ -134,6 +134,7 @@
     <ClInclude Include="Header\Game.h" />
     <ClInclude Include="Header\Rectangle.h" />
     <ClInclude Include="Header\Renderer.h" />
+    <ClInclude Include="Header\ViewContext.h" />
     <ClInclude Include="Header\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

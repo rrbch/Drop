@@ -1,6 +1,6 @@
 #ifndef Window_h
-#define Window_h
-#include "Window.h"
+	#define Window_h
+	#include "Window.h"
 #endif
 
 namespace Drop

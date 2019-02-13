@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Game.cpp" />
-    <ClCompile Include="Source\Window.cpp" />
+    <ClCompile Include="Source\UnitTests\Game.cpp" />
+    <ClCompile Include="Source\UnitTests\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Drop\Drop.vcxproj">

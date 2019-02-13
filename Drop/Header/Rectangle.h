@@ -1,6 +1,6 @@
 #ifndef SDL_h
-#define SDL_h
-#include <SDL.h>
+	#define SDL_h
+	#include <SDL.h>
 #endif
 
 namespace Drop
@@ -29,7 +29,6 @@ namespace Drop
 		void SetHeight(int height);
 
 	private:
-
 		SDL_Rect sDLRectangle;
 	};
 }

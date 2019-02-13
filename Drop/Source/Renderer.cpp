@@ -1,6 +1,6 @@
 #ifndef Renderer_h
-#define Renderer_h
-#include "Renderer.h"
+	#define Renderer_h
+	#include "Renderer.h"
 #endif
 
 namespace Drop

@@ -1,6 +1,6 @@
 #ifndef Rectangle_h
-#define Rectangle_h
-#include "Rectangle.h"
+	#define Rectangle_h
+	#include "Rectangle.h"
 #endif
 
 namespace Drop

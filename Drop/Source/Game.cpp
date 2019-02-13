@@ -1,11 +1,11 @@
 #ifndef SDL_h
-#define SDL_h
-#include <SDL.h>
+	#define SDL_h
+	#include <SDL.h>
 #endif
 
 #ifndef Game_h
-#define Game_h
-#include "Game.h"
+	#define Game_h
+	#include "Game.h"
 #endif
 
 namespace Drop
@@ -28,5 +28,15 @@ namespace Drop
 	void Game::TerminateSDL(void)
 	{
 		SDL_Quit();
+	}
+	void Game::ChangeViewContext(ViewContextType viewContextType)
+	{
+		switch (viewContextType)
+		{
+			case ViewContextType::CombatViewContext:
+			{
+				break;
+			}
+		}
 	}
 }

@@ -1,21 +1,21 @@
 #ifndef SDL_h
-#define SDL_h
-#include <SDL.h>
+	#define SDL_h
+	#include <SDL.h>
 #endif
 
 #ifndef SDL_image_h
-#define SDL_image_h
-#include <SDL_image.h>
+	#define SDL_image_h
+	#include <SDL_image.h>
 #endif
 
 #ifndef std_string
-#define std_string
-#include <string>
+	#define std_string
+	#include <string>
 #endif
 
 #ifndef Rectangle_h
-#define Rectangle_h
-#include "Rectangle.h"
+	#define Rectangle_h
+	#include "Rectangle.h"
 #endif
 
 namespace Drop

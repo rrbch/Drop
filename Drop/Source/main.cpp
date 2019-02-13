@@ -1,26 +1,26 @@
 #ifndef SDL_h
-#define SDL_h
-#include <SDL.h>
+	#define SDL_h
+	#include <SDL.h>
 #endif
 
 #ifndef Game_h
-#define Game_h
-#include "Game.h"
+	#define Game_h
+	#include "Game.h"
 #endif
 
 #ifndef Window_h
-#define Window_h
-#include "Window.h"
+	#define Window_h
+	#include "Window.h"
 #endif
 
 #ifndef Renderer_h
-#define Renderer_h
-#include "Renderer.h"
+	#define Renderer_h
+	#include "Renderer.h"
 #endif
 
 #ifndef Rectangle_h
-#define Rectangle_h
-#include "Rectangle.h"
+	#define Rectangle_h
+	#include "Rectangle.h"
 #endif
 
 int main(int argumentCount, char* argumentValues[])

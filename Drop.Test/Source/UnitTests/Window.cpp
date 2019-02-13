@@ -4,7 +4,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace Drop_Test
+namespace Drop_UnitTest
 {
 	TEST_CLASS(WindowTests)
 	{

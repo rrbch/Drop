@@ -1,11 +1,11 @@
 #ifndef SDL_h
-#define SDL_h
-#include <SDL.h>
+	#define SDL_h
+	#include <SDL.h>
 #endif
 
 #ifndef std_string
-#define std_string
-#include <string>
+	#define std_string
+	#include <string>
 #endif
 
 namespace Drop
