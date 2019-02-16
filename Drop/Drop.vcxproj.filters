@@ -6,6 +6,8 @@
     <ClCompile Include="Source\Window.cpp" />
     <ClCompile Include="Source\Renderer.cpp" />
     <ClCompile Include="Source\Rectangle.cpp" />
+    <ClCompile Include="Source\ExplorationViewContext.cpp" />
+    <ClCompile Include="Source\ViewContextManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Game.h" />
@@ -13,5 +15,7 @@
     <ClInclude Include="Header\Renderer.h" />
     <ClInclude Include="Header\Rectangle.h" />
     <ClInclude Include="Header\ViewContext.h" />
+    <ClInclude Include="Header\ExplorationViewContext.h" />
+    <ClInclude Include="Header\ViewContextManager.h" />
   </ItemGroup>
 </Project>

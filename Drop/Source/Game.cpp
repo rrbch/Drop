@@ -29,14 +29,4 @@ namespace Drop
 	{
 		SDL_Quit();
 	}
-	void Game::ChangeViewContext(ViewContextType viewContextType)
-	{
-		switch (viewContextType)
-		{
-			case ViewContextType::CombatViewContext:
-			{
-				break;
-			}
-		}
-	}
 }
