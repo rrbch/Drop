@@ -6,7 +6,7 @@
 namespace Drop
 {
 	// Public
-	Renderer::Renderer(SDL_Window * sDLWindow)
+	Renderer::Renderer(SDL_Window* sDLWindow)
 	{
 		this->sDLWindow = sDLWindow;
 

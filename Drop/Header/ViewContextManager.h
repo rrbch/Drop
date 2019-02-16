@@ -18,15 +18,15 @@ namespace Drop
 	class ViewContextManager
 	{
 	public:
-		ViewContextManager(void);
+		ViewContextManager(Drop::Renderer* renderer);
 		
 		~ViewContextManager(void);
 
 		void ChangeViewContext(Drop::ViewContextType viewContextType);
 
-		ViewContext& activeViewContext;
+		ViewContext* activeViewContext;
 
 	private:
-		Drop::ExplorationViewContext& explorationViewContext;
+		Drop::ExplorationViewContext* explorationViewContext;
 	};
 }

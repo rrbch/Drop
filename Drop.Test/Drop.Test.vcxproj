@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\UnitTests\Game.cpp" />
+    <ClCompile Include="Source\UnitTests\ViewContextManager.cpp" />
     <ClCompile Include="Source\UnitTests\Window.cpp" />
   </ItemGroup>
   <ItemGroup>

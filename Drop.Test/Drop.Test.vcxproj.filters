@@ -3,5 +3,6 @@
   <ItemGroup>
     <ClCompile Include="Source\UnitTests\Game.cpp" />
     <ClCompile Include="Source\UnitTests\Window.cpp" />
+    <ClCompile Include="Source\UnitTests\ViewContextManager.cpp" />
   </ItemGroup>
 </Project>
