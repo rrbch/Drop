@@ -15,6 +15,6 @@ namespace Drop
 	public:
 		ExplorationViewContext(Drop::Renderer* renderer);
 
-		void HandleUserInput(SDL_Event sDLEvent) override;
+		void HandleEvent(SDL_Event sDLEvent) override;
 	};
 }

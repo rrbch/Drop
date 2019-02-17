@@ -2,14 +2,14 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Source\main.cpp" />
-    <ClCompile Include="Source\Game.cpp" />
     <ClCompile Include="Source\Window.cpp" />
     <ClCompile Include="Source\Renderer.cpp" />
     <ClCompile Include="Source\Rectangle.cpp" />
     <ClCompile Include="Source\ExplorationViewContext.cpp" />
     <ClCompile Include="Source\ViewContextManager.cpp" />
-    <ClCompile Include="Source\Position.cpp" />
     <ClCompile Include="Source\ViewContext.cpp" />
+    <ClCompile Include="Source\Components\Position.cpp" />
+    <ClCompile Include="Source\Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Game.h" />
@@ -19,6 +19,6 @@
     <ClInclude Include="Header\ViewContext.h" />
     <ClInclude Include="Header\ExplorationViewContext.h" />
     <ClInclude Include="Header\ViewContextManager.h" />
-    <ClInclude Include="Header\Position.h" />
+    <ClInclude Include="Header\Components\Position.h" />
   </ItemGroup>
 </Project>

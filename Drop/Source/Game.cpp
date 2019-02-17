@@ -63,7 +63,7 @@ namespace Drop
 
 			while (true)
 			{
-				viewContextManager->activeViewContext->HandleUserInput(currentEvent);
+				viewContextManager->activeViewContext->HandleEvent(currentEvent);
 			}
 		}
 	}

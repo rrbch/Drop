@@ -15,7 +15,7 @@ namespace Drop
 	public:
 		ViewContext(Drop::Renderer* renderer);
 
-		virtual void HandleUserInput(SDL_Event sDLEvent) = 0;
+		virtual void HandleEvent(SDL_Event sDLEvent) = 0;
 
 	protected:
 		Drop::Renderer* renderer;

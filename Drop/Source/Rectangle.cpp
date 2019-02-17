@@ -12,8 +12,6 @@ namespace Drop
 		sDLRectangle.y = positionY;
 		sDLRectangle.w = width;
 		sDLRectangle.h = height;
-
-
 	}
 
 	SDL_Rect Rectangle::GetSDLRectangle(void)

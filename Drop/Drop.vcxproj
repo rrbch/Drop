@@ -124,7 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Position.cpp" />
+    <ClCompile Include="Source\Components\Position.cpp" />
     <ClCompile Include="Source\ViewContext.cpp" />
     <ClCompile Include="Source\ViewContextManager.cpp" />
     <ClCompile Include="Source\ExplorationViewContext.cpp" />
@@ -137,7 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Header\ExplorationViewContext.h" />
     <ClInclude Include="Header\Game.h" />
-    <ClInclude Include="Header\Position.h" />
+    <ClInclude Include="Header\Components\Position.h" />
     <ClInclude Include="Header\Rectangle.h" />
     <ClInclude Include="Header\Renderer.h" />
     <ClInclude Include="Header\ViewContext.h" />

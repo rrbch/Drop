@@ -8,9 +8,8 @@ namespace Drop
 	ExplorationViewContext::ExplorationViewContext(Drop::Renderer* renderer) : ViewContext(renderer) 
 	{}
 
-	void ExplorationViewContext::HandleUserInput(SDL_Event sDLEvent)
-	{
-	}
+	void ExplorationViewContext::HandleEvent(SDL_Event sDLEvent)
+	{}
 }
 
 /* Player movement

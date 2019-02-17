@@ -5,7 +5,6 @@
 
 namespace Drop
 {	
-	// Public
 	Window::Window(int width, int height, std::string title)
 	{
 		this->width = width;
@@ -25,7 +24,6 @@ namespace Drop
 		return sDLWindow;
 	}
 
-	// Private
 	void Window::InitializeSDLWindow(void)
 	{
 		sDLWindow = SDL_CreateWindow(

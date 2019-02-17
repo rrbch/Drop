@@ -1,8 +1,3 @@
-#ifndef ViewContextManager
-	#define ViewContentMangager
-	#include "ViewContextManager.h"
-#endif
-
 #ifndef Window_h
 	#define Window_h
 	#include "Window.h"
@@ -11,6 +6,11 @@
 #ifndef Renderer_h
 	#define Renderer_h
 	#include "Renderer.h"
+#endif
+
+#ifndef ViewContextManager_h
+	#define ViewContextManager_h
+	#include "ViewContextManager.h"
 #endif
 
 namespace Drop

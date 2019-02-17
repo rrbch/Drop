@@ -1,38 +1,40 @@
-#include <ViewContextManager.cpp>
+#ifndef ViewContextManager_h
+	#define ViewContextManager_h
+	#include <ViewContextManager.h>
+#endif
 
-#include "CppUnitTest.h"
+#ifndef CppUnitTest_h
+	#define CppUnitTest_h
+	#include "CppUnitTest.h"
+#endif
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace Drop_UnitTest
+namespace Drop_UnitTests
 {
 	TEST_CLASS(ViewContextManagerTests)
 	{
 	public:
-
 		TEST_METHOD(Constructor)
 		{
-			Drop::ViewContextManager();
+			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(nullptr);
 		}
-
+		
 		TEST_METHOD(Destructor)
 		{
-			Drop::ViewContextManager();
+			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(nullptr);
 		}
-
-		TEST_METHOD(ExplorationViewContextIsDefaultView)
+		
+		TEST_METHOD(ExplorationViewContextIsDefaultContext)
 		{
-			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager();
-
-			Drop::ExplorationViewContext& explorationViewContext = (Drop::ExplorationViewContext&)viewContextManager.activeViewContext;
+			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(nullptr);
+			Drop::ExplorationViewContext* explorationViewContext = (Drop::ExplorationViewContext*)viewContextManager.activeViewContext;
 		}
-
+		
 		TEST_METHOD(ChangeToExplorationViewContext)
 		{
-			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager();
-			viewContextManager.ChangeViewContext(Drop::ViewContextType::Exploration);
-
-			Drop::ExplorationViewContext& explorationViewContext = (Drop::ExplorationViewContext&)viewContextManager.activeViewContext;
+			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(nullptr);
+			Drop::ExplorationViewContext* explorationViewContext = (Drop::ExplorationViewContext*)viewContextManager.activeViewContext;
 		}
 	};
 }

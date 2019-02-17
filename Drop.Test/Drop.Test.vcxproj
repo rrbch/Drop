@@ -87,8 +87,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Niklas\source\repos\Drop\Drop.Test\Dependencies\Include;C:\Users\Niklas\source\repos\Drop\Drop\Header;C:\Users\Niklas\source\repos\Drop\Drop\Source;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Niklas\source\repos\Drop\Drop.Test\Dependencies\Libraries;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Niklas\source\repos\Drop\Drop.Test\Dependencies\Include;C:\Users\Niklas\source\repos\Drop\Drop\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Niklas\source\repos\Drop\Drop.Test\Dependencies\Libraries;C:\Users\Niklas\source\repos\Drop\Drop\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -111,7 +111,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;ExplorationViewContext.obj;Game.obj;Position.obj;Rectangle.obj;Renderer.obj;ViewContext.obj;ViewContextManager.obj;Window.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

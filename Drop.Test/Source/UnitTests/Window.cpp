@@ -1,10 +1,16 @@
-#include <Window.cpp>
+#ifndef Window_h
+	#define Window_h
+	#include <Window.h>
+#endif
 
-#include "CppUnitTest.h"
+#ifndef CppUnitTest_h
+	#define CppUnitTest_h
+	#include "CppUnitTest.h"
+#endif
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace Drop_UnitTest
+namespace Drop_UnitTests
 {
 	TEST_CLASS(WindowTests)
 	{
@@ -13,12 +19,12 @@ namespace Drop_UnitTest
 		{
 			Drop::Window(0, 0, "");
 		}
-
+	
 		TEST_METHOD(Destructor)
 		{
 			Drop::Window(0, 0, "");
 		}
-
+	
 		TEST_METHOD(GetSDLWindow)
 		{
 			Drop::Window window = Drop::Window(0, 0, "title");
