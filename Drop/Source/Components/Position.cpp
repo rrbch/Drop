@@ -5,10 +5,10 @@
 
 namespace Drop
 {
-	Position::Position(int positionX, int positionY)
+	Position::Position(int x, int y)
 	{
-		PositionX = positionX;
-		PositionY = positionY;
+		X = x;
+		Y = y;
 	}
 
 	Position::~Position(void)

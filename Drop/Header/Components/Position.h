@@ -3,12 +3,12 @@ namespace Drop
 	class Position
 	{
 	public:
-		Position(int positionX, int positionY);
+		Position(int x, int y);
 
 		~Position(void);
 
-		int PositionX;
+		int X;
 
-		int PositionY;
+		int Y;
 	};
 }

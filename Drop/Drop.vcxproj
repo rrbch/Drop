@@ -125,6 +125,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\Components\Position.cpp" />
+    <ClCompile Include="Source\Components\Sprite.cpp" />
     <ClCompile Include="Source\ViewContext.cpp" />
     <ClCompile Include="Source\ViewContextManager.cpp" />
     <ClCompile Include="Source\ExplorationViewContext.cpp" />
@@ -135,6 +136,7 @@
     <ClCompile Include="Source\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Components\Sprite.h" />
     <ClInclude Include="Header\ExplorationViewContext.h" />
     <ClInclude Include="Header\Game.h" />
     <ClInclude Include="Header\Components\Position.h" />
@@ -143,6 +145,9 @@
     <ClInclude Include="Header\ViewContext.h" />
     <ClInclude Include="Header\ViewContextManager.h" />
     <ClInclude Include="Header\Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

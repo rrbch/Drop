@@ -5,6 +5,7 @@
 
 namespace Drop
 {
+	// Public
 	Rectangle::Rectangle(int positionX, int positionY, int width, int height)
 	{
 		sDLRectangle = SDL_Rect();

@@ -5,6 +5,7 @@
 
 namespace Drop
 {
+	// Public
 	ViewContextManager::ViewContextManager(Drop::Renderer* renderer)
 	{
 		explorationViewContext = new Drop::ExplorationViewContext(renderer);

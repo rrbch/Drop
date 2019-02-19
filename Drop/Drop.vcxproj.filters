@@ -10,6 +10,7 @@
     <ClCompile Include="Source\ViewContext.cpp" />
     <ClCompile Include="Source\Components\Position.cpp" />
     <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\Components\Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Game.h" />
@@ -20,5 +21,9 @@
     <ClInclude Include="Header\ExplorationViewContext.h" />
     <ClInclude Include="Header\ViewContextManager.h" />
     <ClInclude Include="Header\Components\Position.h" />
+    <ClInclude Include="Header\Components\Sprite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />
   </ItemGroup>
 </Project>

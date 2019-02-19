@@ -18,6 +18,16 @@
 	#include "Rectangle.h"
 #endif
 
+#ifndef Sprite_h
+	#define Sprite_h
+	#include "Components/Sprite.h"
+#endif
+
+#ifndef Position_h
+	#define Position_h
+	#include "Components/Position.h"
+#endif
+
 namespace Drop
 {
 	class Renderer
@@ -36,6 +46,8 @@ namespace Drop
 		void Copy(Rectangle targetRectangle, Rectangle destinationRectangle);
 
 		void Present(void);
+
+		void DrawSprite(const Drop::Sprite& sprite, const Drop::Position& position);
 
 	private:
 		SDL_Window* sDLWindow;

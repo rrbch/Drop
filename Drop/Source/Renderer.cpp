@@ -59,6 +59,22 @@ namespace Drop
 		SDL_RenderPresent(sDLRenderer);
 	}
 
+	void Renderer::DrawSprite(const Drop::Sprite& sprite, const Drop::Position& position)
+	{
+		LoadTexture(sprite.Source);
+
+		Drop::Rectangle sourceRectangle = Drop::Rectangle(sprite.X, sprite.Y, sprite.Width, sprite.Height);
+		Drop::Rectangle destinationRectangle = Drop::Rectangle(position.X, position.Y, sprite.Width, sprite.Height);
+
+		SetDrawColor(0, 0, 0, 255);
+		Clear();
+
+		SetDrawColor(255, 255, 255, 255);
+
+		Copy(sourceRectangle, destinationRectangle);
+		Present();
+	}
+
 	// Private
 	void Renderer::InitializeSDLImage(void)
 	{

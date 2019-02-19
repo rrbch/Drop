@@ -15,6 +15,7 @@
 
 namespace Drop
 {
+	// Public
 	Game::Game(void)
 	{
 		InitializeSDL();
@@ -27,6 +28,7 @@ namespace Drop
 		DeleteFields();
 	}
 
+	// Private
 	void Game::InitializeSDL(void)
 	{
 		SDL_Init(SDL_INIT_VIDEO);
@@ -40,31 +42,14 @@ namespace Drop
 	void Game::Start(void)
 	{
 		SDL_Event currentEvent;
-		bool canExecute = true;
-		while (canExecute)
+		while (true)
 		{
-			renderer->LoadTexture("C:\\Users\\Niklas\\source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png");
-
-			Drop::Rectangle sourceRectangle = Drop::Rectangle(16, 64, 16, 16);
-			Drop::Rectangle destinationRectangle = Drop::Rectangle(0, 0, 16, 16);
-
-			renderer->SetDrawColor(0, 0, 0, 255);
-			renderer->Clear();
-
-			renderer->SetDrawColor(255, 255, 255, 255);
-
-			renderer->Copy(sourceRectangle, destinationRectangle);
-			renderer->Present();
-
 			if (SDL_PollEvent(&currentEvent) == 0)
 			{
 				continue;
 			}
 
-			while (true)
-			{
-				viewContextManager->activeViewContext->HandleEvent(currentEvent);
-			}
+			viewContextManager->activeViewContext->HandleEvent(currentEvent);
 		}
 	}
 
