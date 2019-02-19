@@ -11,6 +11,8 @@
     <ClCompile Include="Source\Components\Position.cpp" />
     <ClCompile Include="Source\Game.cpp" />
     <ClCompile Include="Source\Components\Sprite.cpp" />
+    <ClCompile Include="Source\Entity.cpp" />
+    <ClCompile Include="Source\Events\Event.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Game.h" />
@@ -22,6 +24,8 @@
     <ClInclude Include="Header\ViewContextManager.h" />
     <ClInclude Include="Header\Components\Position.h" />
     <ClInclude Include="Header\Components\Sprite.h" />
+    <ClInclude Include="Header\Events\Event.h" />
+    <ClInclude Include="Header\Entity.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />
