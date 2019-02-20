@@ -1,3 +1,13 @@
+#ifndef std_queue
+	#define std_queue
+	#include <queue>
+#endif
+
+#ifndef Event_h
+	#define Event_h
+	#include "Events/Event.h"
+#endif
+
 #ifndef Window_h
 	#define Window_h
 	#include "Window.h"
@@ -23,6 +33,8 @@ namespace Drop
 		~Game(void);
 
 		void Start(void);
+
+		std::queue<Event>* EventQueue;
 
 	private:
 		Drop::Window* window;

@@ -8,7 +8,7 @@ namespace Drop
 	class Event
 	{
 	public:
-		Event();
+		Event(const Entity& initiator);
 
 		~Event();
 
