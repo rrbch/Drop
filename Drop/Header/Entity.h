@@ -13,12 +13,12 @@ namespace Drop
 	class Entity
 	{
 	public:
-		Entity();
+		Entity(const Position* position, const Sprite* sprite);
 
 		~Entity();
 
-		Position& Position;
+		const Position* Position;
 
-		Sprite& Sprite;
+		const Sprite* Sprite;
 	};
 }

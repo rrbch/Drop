@@ -1,6 +1,11 @@
 #ifndef ViewContextManager_h
 	#define ViewContextManager_h
-	#include <ViewContextManager.h>
+	#include "EventProcessors/ViewContextManager.h"
+#endif
+
+#ifndef ViewContextChangeEvent_h
+	#define ViewContextChangeEvent_h
+	#include "Events/ViewContextChangeEvent.h"
 #endif
 
 #ifndef CppUnitTest_h
@@ -31,10 +36,12 @@ namespace Drop_UnitTests
 			Drop::ExplorationViewContext* explorationViewContext = (Drop::ExplorationViewContext*)viewContextManager.activeViewContext;
 		}
 		
+		/* TODO - Change the view context to something else than the ExplorationViewContext
 		TEST_METHOD(ChangeToExplorationViewContext)
 		{
 			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(nullptr);
 			Drop::ExplorationViewContext* explorationViewContext = (Drop::ExplorationViewContext*)viewContextManager.activeViewContext;
 		}
+		*/
 	};
 }

@@ -5,9 +5,8 @@
 
 namespace Drop
 {
-	Event::Event(const Entity& initiator) : Initiator(initiator)
-	{}
-
 	Event::~Event()
-	{}
+	{
+		delete(Initiator);
+	}
 }

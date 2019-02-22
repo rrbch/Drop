@@ -8,10 +8,10 @@ namespace Drop
 	class Event
 	{
 	public:
-		Event(const Entity& initiator);
+		Event(const Entity* initiator) : Initiator(initiator) {}
 
-		~Event();
+		virtual ~Event() = 0;
 
-		const Drop::Entity& Initiator;
+		const Drop::Entity* Initiator;
 	};
 }

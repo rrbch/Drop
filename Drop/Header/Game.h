@@ -20,7 +20,7 @@
 
 #ifndef ViewContextManager_h
 	#define ViewContextManager_h
-	#include "ViewContextManager.h"
+	#include "EventProcessors/ViewContextManager.h"
 #endif
 
 namespace Drop

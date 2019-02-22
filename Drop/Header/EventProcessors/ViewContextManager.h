@@ -3,6 +3,11 @@
 	#include "ViewContext.h"
 #endif
 
+#ifndef IProcessEvents_h
+	#define IProcessEvents_h
+	#include "IProcessEvents.h"
+#endif
+
 #ifndef ExplorationViewContext_h
 	#define ExplorationViewContext_h
 	#include "ExplorationViewContext.h"
@@ -10,21 +15,16 @@
 
 namespace Drop
 {
-	enum ViewContextType
-	{
-		Exploration = 0
-	};
-
-	class ViewContextManager
+	class ViewContextManager : Drop::IProcessEvents
 	{
 	public:
 		ViewContextManager(Drop::Renderer* renderer);
 		
 		~ViewContextManager(void);
 
-		void ChangeViewContext(Drop::ViewContextType viewContextType);
-
 		ViewContext* activeViewContext;
+
+		void ProcessEvent(Drop::Event* eventToProcess);
 
 	private:
 		Drop::ExplorationViewContext* explorationViewContext;
