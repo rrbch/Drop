@@ -1,3 +1,8 @@
+#ifndef std_queue
+	#define std_queue
+	#include <queue>
+#endif
+
 #ifndef ViewContextManager_h
 	#define ViewContextManager_h
 	#include "EventProcessors/ViewContextManager.h"
@@ -21,9 +26,9 @@
 namespace Drop
 {
 	// Public
-	ViewContextManager::ViewContextManager(Drop::Renderer* renderer)
+	ViewContextManager::ViewContextManager(std::queue<Drop::Event>& eventQueue, Drop::Renderer& renderer)
 	{
-		explorationViewContext = new Drop::ExplorationViewContext(renderer);
+		explorationViewContext = new Drop::ExplorationViewContext(eventQueue, renderer);
 		activeViewContext = explorationViewContext;
 	}
 
@@ -32,9 +37,9 @@ namespace Drop
 		delete(explorationViewContext);
 	}
 
-	void ViewContextManager::ProcessEvent(Drop::Event* eventToProcess)
+	void ViewContextManager::ProcessEvent(Drop::Event* userInput)
 	{
-		ViewContextChangeEvent* viewContextChangeEvent = dynamic_cast<ViewContextChangeEvent*>(eventToProcess);
+		ViewContextChangeEvent* viewContextChangeEvent = dynamic_cast<ViewContextChangeEvent*>(userInput);
 		if (viewContextChangeEvent == nullptr)
 		{
 			return;

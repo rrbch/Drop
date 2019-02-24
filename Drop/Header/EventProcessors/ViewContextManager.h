@@ -18,13 +18,13 @@ namespace Drop
 	class ViewContextManager : Drop::IProcessEvents
 	{
 	public:
-		ViewContextManager(Drop::Renderer* renderer);
+		ViewContextManager(std::queue<Drop::Event>& eventQueue, Drop::Renderer& renderer);
 		
 		~ViewContextManager(void);
 
 		ViewContext* activeViewContext;
 
-		void ProcessEvent(Drop::Event* eventToProcess);
+		void ProcessEvent(Drop::Event* userInput);
 
 	private:
 		Drop::ExplorationViewContext* explorationViewContext;

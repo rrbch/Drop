@@ -55,17 +55,17 @@ namespace Drop
 
 	void Game::InitializeFields(void)
 	{
-		EventQueue = new std::queue<Event>();
+		eventQueue = new std::queue<Event>();
 
 		window = new Drop::Window(640, 480, "Drop 0.1");
 		renderer = new Drop::Renderer(window->GetSDLWindow());
 
-		viewContextManager = new Drop::ViewContextManager(renderer);
+		viewContextManager = new Drop::ViewContextManager(*eventQueue, *renderer);
 	}
 
 	void Game::DeleteFields(void)
 	{
-		delete(EventQueue);
+		delete(eventQueue);
 
 		delete(window);
 		delete(renderer);

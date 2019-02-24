@@ -34,9 +34,9 @@ namespace Drop
 
 		void Start(void);
 
-		std::queue<Event>* EventQueue;
-
 	private:
+		std::queue<Event>* eventQueue;
+
 		Drop::Window* window;
 		
 		Drop::Renderer* renderer;
