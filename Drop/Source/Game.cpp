@@ -60,7 +60,8 @@ namespace Drop
 		window = new Drop::Window(640, 480, "Drop 0.1");
 		renderer = new Drop::Renderer(window->GetSDLWindow());
 
-		viewContextManager = new Drop::ViewContextManager(*eventQueue, *renderer);
+		viewContextManager = new Drop::ViewContextManager(*eventQueue);
+		animationManager = new Drop::AnimationManager(*renderer);
 	}
 
 	void Game::DeleteFields(void)
@@ -71,5 +72,24 @@ namespace Drop
 		delete(renderer);
 
 		delete(viewContextManager);
+		delete(animationManager);
+	}
+
+	void Game::ForwardEvents(void)
+	{
+		Drop::Event* currentEvent = &eventQueue->front();
+		while (currentEvent != nullptr)
+		{
+			for (std::deque<Drop::IProcessEvents>::iterator eventProcessor = eventProcessors->begin();
+				eventProcessor != eventProcessors->end();)
+			{
+				eventProcessor->ProcessEvent(currentEvent);
+
+				++eventProcessor;
+			}
+	
+			eventQueue->pop();
+			currentEvent = &eventQueue->front();
+		}
 	}
 }

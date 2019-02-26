@@ -23,7 +23,7 @@ namespace Drop
 	class ExplorationViewContext : public Drop::ViewContext
 	{
 	public:
-		ExplorationViewContext(std::queue<Drop::Event>& eventQueue, Drop::Renderer& renderer);
+		ExplorationViewContext(std::queue<Drop::Event>& eventQueue);
 
 		~ExplorationViewContext(void);
 

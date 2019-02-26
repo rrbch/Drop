@@ -6,7 +6,7 @@
 namespace Drop
 {
 	// Public
-	ExplorationViewContext::ExplorationViewContext(std::queue<Drop::Event>& eventQueue, Drop::Renderer& renderer) : Drop::ViewContext(eventQueue, renderer)
+	ExplorationViewContext::ExplorationViewContext(std::queue<Drop::Event>& eventQueue) : Drop::ViewContext(eventQueue)
 	{
 		playerPosition = new Drop::Position(0, 0);
 		playerSprite = new Drop::Sprite(
@@ -85,7 +85,5 @@ namespace Drop
 			default:
 				break;
 		}
-
-		renderer.DrawSprite(*playerSprite, *playerPosition);
 	}
 }

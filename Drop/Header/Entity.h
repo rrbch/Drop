@@ -15,7 +15,7 @@ namespace Drop
 	public:
 		Entity(const Position* position, const Sprite* sprite);
 
-		~Entity();
+		~Entity(void);
 
 		const Position* Position;
 

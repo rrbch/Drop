@@ -5,6 +5,6 @@
 
 namespace Drop
 {
-	ViewContext::ViewContext(std::queue<Drop::Event>& eventQueue, Drop::Renderer& renderer) : eventQueue(eventQueue),  renderer(renderer)
+	ViewContext::ViewContext(std::queue<Drop::Event>& eventQueue) : eventQueue(eventQueue)
 	{}
 }

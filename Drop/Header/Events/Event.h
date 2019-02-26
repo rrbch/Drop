@@ -10,7 +10,7 @@ namespace Drop
 	public:
 		Event(const Entity* initiator) : Initiator(initiator) {}
 
-		virtual ~Event() = 0;
+		virtual ~Event(void) = 0;
 
 		const Drop::Entity* Initiator;
 	};

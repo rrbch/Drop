@@ -5,7 +5,7 @@
 
 #ifndef ViewContextManager_h
 	#define ViewContextManager_h
-	#include "EventProcessors/ViewContextManager.h"
+	#include "ViewContextManager.h"
 #endif
 
 #ifndef ViewContextChangeEvent_h
@@ -26,9 +26,9 @@
 namespace Drop
 {
 	// Public
-	ViewContextManager::ViewContextManager(std::queue<Drop::Event>& eventQueue, Drop::Renderer& renderer)
+	ViewContextManager::ViewContextManager(std::queue<Drop::Event>& eventQueue)
 	{
-		explorationViewContext = new Drop::ExplorationViewContext(eventQueue, renderer);
+		explorationViewContext = new Drop::ExplorationViewContext(eventQueue);
 		activeViewContext = explorationViewContext;
 	}
 

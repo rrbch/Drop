@@ -23,13 +23,11 @@ namespace Drop
 	class ViewContext
 	{
 	public:
-		ViewContext(std::queue<Drop::Event>& eventQueue, Drop::Renderer& renderer);
+		ViewContext(std::queue<Drop::Event>& eventQueue);
 
 		virtual void HandleEvent(SDL_Event sDLEvent) = 0;
 
 	protected:
-		Drop::Renderer& renderer;
-
 		std::queue<Drop::Event>& eventQueue;
 	};
 }
