@@ -13,7 +13,7 @@ namespace Drop
 	class ViewContextChangeEvent : Drop::Event
 	{
 	public:
-		ViewContextChangeEvent(const Drop::Entity* initiator, ViewContextType newViewContextType);
+		ViewContextChangeEvent(const Drop::Entity& initiator, ViewContextType newViewContextType);
 
 		~ViewContextChangeEvent(void);
 

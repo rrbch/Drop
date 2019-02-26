@@ -6,7 +6,5 @@
 namespace Drop
 {
 	Event::~Event()
-	{
-		delete(Initiator);
-	}
+	{ }
 }

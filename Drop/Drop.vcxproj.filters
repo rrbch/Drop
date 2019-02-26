@@ -12,11 +12,11 @@
     <ClCompile Include="Source\Components\Sprite.cpp" />
     <ClCompile Include="Source\Entity.cpp" />
     <ClCompile Include="Source\Events\ViewContextChangeEvent.cpp" />
-    <ClCompile Include="Source\Events\Event.cpp" />
     <ClCompile Include="Source\AnimationManager.cpp" />
     <ClCompile Include="Source\ViewContextManager.cpp" />
     <ClCompile Include="Header\Events\EntityMovedEvent.h" />
     <ClCompile Include="Source\Events\EntityMovedEvent.cpp" />
+    <ClCompile Include="Source\Events\Event.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Game.h" />
