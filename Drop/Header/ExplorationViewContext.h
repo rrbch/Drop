@@ -3,6 +3,11 @@
 	#include <SDL.h>
 #endif
 
+#ifndef IQueueEvents_h
+	#define IQueueEvents_h
+	#include "IQueueEvents.h"
+#endif
+
 #ifndef ViewContext_h
 	#define ViewContext_h
 	#include "ViewContext.h"
@@ -23,7 +28,7 @@ namespace Drop
 	class ExplorationViewContext : public Drop::ViewContext
 	{
 	public:
-		ExplorationViewContext(std::queue<Drop::Event>& eventQueue);
+		ExplorationViewContext(Drop::IQueueEvents& iQueueEvents);
 
 		~ExplorationViewContext(void);
 

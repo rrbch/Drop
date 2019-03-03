@@ -8,6 +8,11 @@
 	#include <forward_list>
 #endif
 
+#ifndef IQueueEvents_h
+	#define IQueueEvents_h
+	#include "IQueueEvents.h"
+#endif
+
 #ifndef Event_h
 	#define Event_h
 	#include "Events/Event.h"
@@ -35,7 +40,7 @@
 
 namespace Drop
 {
-	class Game
+	class Game : Drop::IQueueEvents
 	{
 	public:
 		Game(void);
@@ -44,10 +49,12 @@ namespace Drop
 
 		void Start(void);
 
-	private:
-		std::queue<Event>* eventQueue;
+		void IQueueEvents::QueueEvent(Drop::Event* event);
 
-		std::deque<IProcessEvents>* eventProcessors;
+	private:
+		std::queue<Event*>* eventQueue;
+
+		std::deque <IProcessEvents> * eventProcessors;
 
 		Drop::Window* window;
 		

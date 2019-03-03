@@ -8,7 +8,7 @@ namespace Drop
 	class Event
 	{
 	public:
-		Event(const Entity& initiator) : Initiator(initiator) {}
+		Event(Entity& initiator) : Initiator(initiator) {}
 
 		virtual ~Event(void) = 0;
 

@@ -28,17 +28,6 @@ namespace Drop
 		DeleteFields();
 	}
 
-	// Private
-	void Game::InitializeSDL(void)
-	{
-		SDL_Init(SDL_INIT_VIDEO);
-	}
-
-	void Game::TerminateSDL(void)
-	{
-		SDL_Quit();
-	}
-
 	void Game::Start(void)
 	{
 		SDL_Event currentEvent;
@@ -53,14 +42,30 @@ namespace Drop
 		}
 	}
 
+	void Game::QueueEvent(Drop::Event* event)
+	{
+		eventQueue->push(event);
+	}
+
+	// Private
+	void Game::InitializeSDL(void)
+	{
+		SDL_Init(SDL_INIT_VIDEO);
+	}
+
+	void Game::TerminateSDL(void)
+	{
+		SDL_Quit();
+	}
+
 	void Game::InitializeFields(void)
 	{
-		eventQueue = new std::queue<Event>();
+		eventQueue = new std::queue<Event*>();
 
 		window = new Drop::Window(640, 480, "Drop 0.1");
 		renderer = new Drop::Renderer(window->GetSDLWindow());
 
-		viewContextManager = new Drop::ViewContextManager(*eventQueue);
+		viewContextManager = new Drop::ViewContextManager(*this);
 		animationManager = new Drop::AnimationManager(*renderer);
 	}
 
@@ -77,7 +82,7 @@ namespace Drop
 
 	void Game::ForwardEvents(void)
 	{
-		Drop::Event* currentEvent = &eventQueue->front();
+		Drop::Event* currentEvent = eventQueue->front();
 		while (currentEvent != nullptr)
 		{
 			for (std::deque<Drop::IProcessEvents>::iterator eventProcessor = eventProcessors->begin();
@@ -89,7 +94,7 @@ namespace Drop
 			}
 	
 			eventQueue->pop();
-			currentEvent = &eventQueue->front();
+			currentEvent = eventQueue->front();
 		}
 	}
 }

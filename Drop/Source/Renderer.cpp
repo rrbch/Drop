@@ -59,7 +59,7 @@ namespace Drop
 		SDL_RenderPresent(sDLRenderer);
 	}
 
-	void Renderer::DrawSprite(const Drop::Sprite& sprite, const Drop::Position& position)
+	void Renderer::DrawSprite(Drop::Sprite& sprite, Drop::Position& position)
 	{
 		LoadTexture(sprite.Source);
 

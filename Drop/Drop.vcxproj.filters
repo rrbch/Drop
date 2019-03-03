@@ -33,6 +33,7 @@
     <ClInclude Include="Header\ViewContextManager.h" />
     <ClInclude Include="Header\AnimationManager.h" />
     <ClInclude Include="Header\IProcessEvents.h" />
+    <ClInclude Include="Header\IQueueEvents.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />

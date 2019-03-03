@@ -5,7 +5,7 @@
 
 namespace Drop
 {
-	ViewContextChangeEvent::ViewContextChangeEvent(const Drop::Entity& initiator, const ViewContextType newViewContextType) : NewViewContextType(newViewContextType), 
+	ViewContextChangeEvent::ViewContextChangeEvent(Drop::Entity& initiator, ViewContextType newViewContextType) : NewViewContextType(newViewContextType), 
 		Drop::Event(initiator)
 	{}
 

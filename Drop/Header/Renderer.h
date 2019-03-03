@@ -47,7 +47,7 @@ namespace Drop
 
 		void Present(void);
 
-		void DrawSprite(const Drop::Sprite& sprite, const Drop::Position& position);
+		void DrawSprite(Drop::Sprite& sprite, Drop::Position& position);
 
 	private:
 		SDL_Window* sDLWindow;

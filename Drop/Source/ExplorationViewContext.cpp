@@ -6,7 +6,7 @@
 namespace Drop
 {
 	// Public
-	ExplorationViewContext::ExplorationViewContext(std::queue<Drop::Event>& eventQueue) : Drop::ViewContext(eventQueue)
+	ExplorationViewContext::ExplorationViewContext(Drop::IQueueEvents& iQueueEvents) : Drop::ViewContext(iQueueEvents)
 	{
 		playerPosition = new Drop::Position(0, 0);
 		playerSprite = new Drop::Sprite(

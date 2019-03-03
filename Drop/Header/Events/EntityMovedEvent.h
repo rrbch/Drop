@@ -13,7 +13,7 @@ namespace Drop
 	class EntityMovedEvent : Drop::Event
 	{
 	public:
-		EntityMovedEvent(const Drop::Entity* initiator, const Drop::Position& position);
+		EntityMovedEvent(Drop::Entity& initiator, Drop::Position& position);
 
 		~EntityMovedEvent(void);
 

@@ -5,7 +5,7 @@
 
 namespace Drop
 {
-	EntityMovedEvent::EntityMovedEvent(const Drop::Entity* initiator, const Drop::Position& position) : position(position),
+	EntityMovedEvent::EntityMovedEvent(Drop::Entity& initiator, Drop::Position& position) : position(position),
 		Drop::Event(initiator)
 	{}
 

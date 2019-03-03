@@ -5,6 +5,6 @@
 
 namespace Drop
 {
-	ViewContext::ViewContext(std::queue<Drop::Event>& eventQueue) : eventQueue(eventQueue)
+	ViewContext::ViewContext(Drop::IQueueEvents& iQueueEvents) : iQueueEvents(iQueueEvents)
 	{}
 }

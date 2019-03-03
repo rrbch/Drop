@@ -3,9 +3,9 @@
 	#include <SDL.h>
 #endif
 
-#ifndef std_queue
-	#define std_queue
-	#include <queue>
+#ifndef IQueueEvents_h
+	#define IQueueEvents_h
+	#include "IQueueEvents.h"
 #endif
 
 #ifndef Event_h
@@ -23,11 +23,11 @@ namespace Drop
 	class ViewContext
 	{
 	public:
-		ViewContext(std::queue<Drop::Event>& eventQueue);
+		ViewContext(Drop::IQueueEvents& iQueueEvents);
 
 		virtual void HandleEvent(SDL_Event sDLEvent) = 0;
 
 	protected:
-		std::queue<Drop::Event>& eventQueue;
+		Drop::IQueueEvents& iQueueEvents;
 	};
 }

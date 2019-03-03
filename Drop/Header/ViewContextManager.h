@@ -3,6 +3,11 @@
 	#include "IProcessEvents.h"
 #endif
 
+#ifndef IQueueEvents_h
+	#define IQueueEvents_h
+	#include "IQueueEvents.h"
+#endif
+
 #ifndef ViewContext_h
 	#define ViewContext_h
 	#include "ViewContext.h"
@@ -18,7 +23,7 @@ namespace Drop
 	class ViewContextManager : Drop::IProcessEvents
 	{
 	public:
-		ViewContextManager(std::queue<Drop::Event>& eventQueue);
+		ViewContextManager(Drop::IQueueEvents& iQueueEvents);
 		
 		~ViewContextManager(void);
 

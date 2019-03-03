@@ -151,6 +151,7 @@
     <ClInclude Include="Header\ExplorationViewContext.h" />
     <ClInclude Include="Header\Game.h" />
     <ClInclude Include="Header\Components\Position.h" />
+    <ClInclude Include="Header\IQueueEvents.h" />
     <ClInclude Include="Header\Rectangle.h" />
     <ClInclude Include="Header\Renderer.h" />
     <ClInclude Include="Header\ViewContext.h" />

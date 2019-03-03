@@ -26,9 +26,9 @@
 namespace Drop
 {
 	// Public
-	ViewContextManager::ViewContextManager(std::queue<Drop::Event>& eventQueue)
+	ViewContextManager::ViewContextManager(Drop::IQueueEvents& iQueueEvents)
 	{
-		explorationViewContext = new Drop::ExplorationViewContext(eventQueue);
+		explorationViewContext = new Drop::ExplorationViewContext(iQueueEvents);
 		activeViewContext = explorationViewContext;
 	}
 
