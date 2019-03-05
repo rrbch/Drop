@@ -40,7 +40,7 @@
 
 namespace Drop
 {
-	class Game : Drop::IQueueEvents
+	class Game : public Drop::IQueueEvents
 	{
 	public:
 		Game(void);

@@ -17,6 +17,7 @@
     <ClCompile Include="Header\Events\EntityMovedEvent.h" />
     <ClCompile Include="Source\Events\EntityMovedEvent.cpp" />
     <ClCompile Include="Source\Events\Event.cpp" />
+    <ClCompile Include="Source\Commands\MoveCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Game.h" />
@@ -34,6 +35,8 @@
     <ClInclude Include="Header\AnimationManager.h" />
     <ClInclude Include="Header\IProcessEvents.h" />
     <ClInclude Include="Header\IQueueEvents.h" />
+    <ClInclude Include="Header\Commands\MoveCommand.h" />
+    <ClInclude Include="Header\Commands\Command.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />

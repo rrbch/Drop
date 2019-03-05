@@ -20,7 +20,7 @@
 
 namespace Drop
 {
-	class ViewContextManager : Drop::IProcessEvents
+	class ViewContextManager : public Drop::IProcessEvents
 	{
 	public:
 		ViewContextManager(Drop::IQueueEvents& iQueueEvents);
