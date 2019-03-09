@@ -5,7 +5,7 @@
 
 namespace Drop
 {
-	Entity::Entity(Drop::Position* oldPosition, const Drop::Sprite* sprite) : Position(oldPosition), Sprite(sprite)
+	Entity::Entity(Drop::Position* oldPosition, Drop::Sprite* sprite) : Position(oldPosition), Sprite(sprite)
 	{}
 
 	Entity::~Entity(void)
