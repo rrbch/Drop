@@ -3,25 +3,40 @@
 	#include "ExplorationViewContext.h"
 #endif
 
+#ifndef Position_h
+	#define Position_h
+	#include "Components/Position.h"
+#endif
+
+#ifndef Sprite_h
+	#define Sprite_h
+	#include "Components/Sprite.h"
+#endif
+
 namespace Drop
 {
 	// Public
 	ExplorationViewContext::ExplorationViewContext(Drop::IQueueEvents& iQueueEvents) : Drop::ViewContext(iQueueEvents)
 	{
-		playerPosition = new Drop::Position(0, 0);
-		playerSprite = new Drop::Sprite(
+		moveCommand = new MoveCommand();
+
+		Drop::Position* playerPosition = new Drop::Position(0, 0);
+		Drop::Sprite* playerSprite = new Drop::Sprite(
 			"C:\\Users\\Niklas\\source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png",
 			16,
 			64,
 			16,
 			16
 		);
+
+		player = new Drop::Entity(playerPosition, playerSprite);
 	}
 
 	ExplorationViewContext::~ExplorationViewContext(void)
 	{
-		delete(playerPosition);
-		delete(playerSprite);
+		delete(moveCommand);
+
+		delete(player);
 	}
 
 	void ExplorationViewContext::HandleEvent(SDL_Event sDLEvent)
@@ -31,59 +46,52 @@ namespace Drop
 			case SDL_SCANCODE_ESCAPE:
 				break;
 			case SDL_SCANCODE_KP_8:
-				if (sDLEvent.type == SDL_KEYDOWN)
-				{
-					playerPosition->Y -= 16;
-				}
-				break;
 			case SDL_SCANCODE_KP_9:
-				if (sDLEvent.type == SDL_KEYDOWN)
-				{
-					playerPosition->X += 16;
-					playerPosition->Y -= 16;
-				}
-				break;
 			case SDL_SCANCODE_KP_6:
-				if (sDLEvent.type == SDL_KEYDOWN)
-				{
-					playerPosition->X += 16;
-				}
-				break;
 			case SDL_SCANCODE_KP_3:
-				if (sDLEvent.type == SDL_KEYDOWN)
-				{
-					playerPosition->X += 16;
-					playerPosition->Y += 16;
-				}
-				break;
 			case SDL_SCANCODE_KP_2:
-				if (sDLEvent.type == SDL_KEYDOWN)
-				{
-					playerPosition->Y += 16;
-				}
-				break;
 			case SDL_SCANCODE_KP_1:
-				if (sDLEvent.type == SDL_KEYDOWN)
-				{
-					playerPosition->X -= 16;
-					playerPosition->Y += 16;
-				}
-				break;
 			case SDL_SCANCODE_KP_4:
-				if (sDLEvent.type == SDL_KEYDOWN)
-				{
-					playerPosition->X -= 16;
-				}
-				break;
 			case SDL_SCANCODE_KP_7:
 				if (sDLEvent.type == SDL_KEYDOWN)
 				{
-					playerPosition->X -= 16;
-					playerPosition->Y -= 16;
+					Drop::MoveDirection moveDirection = SDLScanCodeToMoveDirection(sDLEvent.key.keysym.scancode);
+
+					moveCommand->MoveDirection = moveDirection;
+					moveCommand->Initiator = player;
+
+					Drop::Event* event = moveCommand->Execute();
+					iQueueEvents.QueueEvent(event);
 				}
 				break;
 			default:
 				break;
+		}
+	}
+
+	// Private
+	Drop::MoveDirection ExplorationViewContext::SDLScanCodeToMoveDirection(SDL_Scancode sDLScancode)
+	{
+		switch (sDLScancode)
+		{
+			case SDL_SCANCODE_KP_8:
+				return Drop::MoveDirection::North;
+			case SDL_SCANCODE_KP_9:
+				return Drop::MoveDirection::NorthEast;
+			case SDL_SCANCODE_KP_6:
+				return Drop::MoveDirection::East;
+			case SDL_SCANCODE_KP_3:
+				return Drop::MoveDirection::SouthEast;
+			case SDL_SCANCODE_KP_2:
+				return Drop::MoveDirection::South;
+			case SDL_SCANCODE_KP_1:
+				return Drop::MoveDirection::SouthWest;
+			case SDL_SCANCODE_KP_4:
+				return Drop::MoveDirection::West;
+			case SDL_SCANCODE_KP_7:
+				return Drop::MoveDirection::NorthWest;
+			default:
+				return Drop::MoveDirection::Undefined;
 		}
 	}
 }

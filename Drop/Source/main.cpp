@@ -11,7 +11,7 @@
 int main(int argumentCount, char* argumentValues[])
 {
 	Drop::Game game = Drop::Game();
-	game.Start();
+	game.Run();
 
 	return 0;
 }

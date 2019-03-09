@@ -5,10 +5,10 @@
 
 namespace Drop
 {
-	Entity::Entity(const Drop::Position* position, const Drop::Sprite* sprite) : Position(position), Sprite(sprite)
+	Entity::Entity(Drop::Position* position, const Drop::Sprite* sprite) : Position(position), Sprite(sprite)
 	{}
 
-	Entity::~Entity()
+	Entity::~Entity(void)
 	{
 		delete(Position);
 		delete(Sprite);

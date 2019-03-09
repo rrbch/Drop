@@ -13,24 +13,37 @@
 	#include "Position.h"
 #endif
 
-#ifndef EntityMovedEvent_h
-	#define EntityMovedEvent_h
-	#include "Events/EntityMovedEvent.h"
-#endif
-
 namespace Drop
 {
+	enum MoveDirection
+	{
+		Undefined = 0,
+		North = 1,
+		NorthEast = 2,
+		East = 3,
+		SouthEast = 4,
+		South = 5,
+		SouthWest = 6,
+		West = 7,
+		NorthWest = 8,
+	};
+
 	class MoveCommand : public Drop::Command
 	{
 	public:
-		MoveCommand();
+		MoveCommand(void);
 
-		~MoveCommand();
+		~MoveCommand(void);
 
 		Drop::Entity* Initiator;
 
-		Drop::Position* NewPosition;
+		Drop::MoveDirection MoveDirection;
+
+		Drop::Position* OldPosition;
 
 		Drop::Event* Command::Execute(void);
+
+	private:
+		Drop::Position* GetNewInitiatorPosition(Drop::MoveDirection moveDirection);
 	};
 }

@@ -9,6 +9,6 @@ namespace Drop
 		Drop::Event(initiator)
 	{}
 
-	ViewContextChangeEvent::~ViewContextChangeEvent()
+	ViewContextChangeEvent::~ViewContextChangeEvent(void)
 	{}
 }

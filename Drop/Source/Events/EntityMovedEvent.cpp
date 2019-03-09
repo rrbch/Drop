@@ -1,6 +1,6 @@
 #ifndef EntityMovedEvent_h
-	#define EntityMovedEvent_h
-	#include "Events/EntityMovedEvent.h"
+#define EntityMovedEvent_h
+#include "Events/EntityMovedEvent.h"
 #endif
 
 namespace Drop

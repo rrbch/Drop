@@ -8,6 +8,6 @@ namespace Drop
 	class IProcessEvents
 	{
 	public:
-		virtual void ProcessEvent(Drop::Event* eventToProcess) = 0;
+		virtual void ProcessEvent(Drop::Event* userInput) = 0;
 	};
 }

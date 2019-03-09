@@ -124,7 +124,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Header\Events\EntityMovedEvent.h" />
     <ClCompile Include="Source\Commands\MoveCommand.cpp" />
     <ClCompile Include="Source\Components\Position.cpp" />
     <ClCompile Include="Source\Components\Sprite.cpp" />
@@ -148,6 +147,7 @@
     <ClInclude Include="Header\Components\Sprite.h" />
     <ClInclude Include="Header\Entity.h" />
     <ClInclude Include="Header\AnimationManager.h" />
+    <ClInclude Include="Header\Events\EntityMovedEvent.h" />
     <ClInclude Include="Header\Events\Event.h" />
     <ClInclude Include="Header\IProcessEvents.h" />
     <ClInclude Include="Header\Events\ViewContextChangeEvent.h" />

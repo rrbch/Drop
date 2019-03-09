@@ -10,7 +10,7 @@
 
 namespace Drop
 {
-	class AnimationManager : Drop::IProcessEvents
+	class AnimationManager : virtual public Drop::IProcessEvents
 	{
 	public:
 		AnimationManager(Drop::Renderer& renderer);

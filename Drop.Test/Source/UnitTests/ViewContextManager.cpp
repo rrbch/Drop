@@ -1,6 +1,6 @@
 #ifndef ViewContextManager_h
 	#define ViewContextManager_h
-	#include "EventProcessors/ViewContextManager.h"
+	#include "ViewContextManager.h"
 #endif
 
 #ifndef ViewContextChangeEvent_h

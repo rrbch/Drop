@@ -13,14 +13,9 @@
 	#include "ViewContext.h"
 #endif
 
-#ifndef Position_h
-	#define Position_h
-	#include "Components/Position.h"
-#endif
-
-#ifndef Sprite_h
-	#define Sprite_h
-	#include "Components/Sprite.h"
+#ifndef MoveCommand_h
+	#define MoveCommand_h
+	#include "Commands/MoveCommand.h"
 #endif
 
 namespace Drop
@@ -35,8 +30,10 @@ namespace Drop
 		void HandleEvent(SDL_Event sDLEvent) override;
 
 	private:
-		Drop::Position* playerPosition;
+		Drop::MoveCommand* moveCommand;
 
-		Drop::Sprite* playerSprite;
+		Drop::Entity* player;
+
+		Drop::MoveDirection SDLScanCodeToMoveDirection(SDL_Scancode sDLScancode);
 	};
 }
