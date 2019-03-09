@@ -28,7 +28,7 @@ namespace Drop
 		DeleteFields();
 	}
 
-	void Game::Start(void)
+	void Game::Run(void)
 	{
 		SDL_Event currentEvent;
 		while (true)
@@ -39,12 +39,17 @@ namespace Drop
 			}
 
 			viewContextManager->activeViewContext->HandleEvent(currentEvent);
+
+			ForwardEvents();
 		}
 	}
 
 	void Game::QueueEvent(Drop::Event* event)
 	{
-		eventQueue->push(event);
+		if (event != nullptr)
+		{
+			eventQueue->push(event);
+		}
 	}
 
 	// Private
@@ -67,6 +72,10 @@ namespace Drop
 
 		viewContextManager = new Drop::ViewContextManager(*this);
 		animationManager = new Drop::AnimationManager(*renderer);
+
+		eventProcessors = new std::deque<Drop::IProcessEvents*>();
+		eventProcessors->push_front(viewContextManager);
+		eventProcessors->push_front(animationManager);
 	}
 
 	void Game::DeleteFields(void)
@@ -78,23 +87,31 @@ namespace Drop
 
 		delete(viewContextManager);
 		delete(animationManager);
+		delete(eventProcessors);
 	}
 
 	void Game::ForwardEvents(void)
 	{
-		Drop::Event* currentEvent = eventQueue->front();
-		while (currentEvent != nullptr)
+		if (eventQueue->size() == 0)
 		{
-			for (std::deque<Drop::IProcessEvents>::iterator eventProcessor = eventProcessors->begin();
-				eventProcessor != eventProcessors->end();)
-			{
-				eventProcessor->ProcessEvent(currentEvent);
+			return;
+		}
 
-				++eventProcessor;
-			}
-	
-			eventQueue->pop();
+		Drop::Event* currentEvent;
+		while (eventQueue->size() != 0)
+		{
 			currentEvent = eventQueue->front();
+
+			for (std::deque<Drop::IProcessEvents*>::iterator eventProcessor = eventProcessors->begin();
+				eventProcessor != eventProcessors->end();
+				eventProcessor++)
+			{
+				(*eventProcessor)->ProcessEvent(currentEvent);
+			}
+
+			delete(currentEvent);
+
+			eventQueue->pop();
 		}
 	}
 }

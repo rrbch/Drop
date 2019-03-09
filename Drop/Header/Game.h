@@ -47,14 +47,14 @@ namespace Drop
 
 		~Game(void);
 
-		void Start(void);
+		void Run(void);
 
 		void IQueueEvents::QueueEvent(Drop::Event* event);
 
 	private:
 		std::queue<Event*>* eventQueue;
 
-		std::deque <IProcessEvents> * eventProcessors;
+		std::deque<IProcessEvents*>* eventProcessors;
 
 		Drop::Window* window;
 		

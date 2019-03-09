@@ -5,10 +5,12 @@
 
 namespace Drop
 {
-	EntityMovedEvent::EntityMovedEvent(Drop::Entity& initiator, Drop::Position& position) : position(position),
+	EntityMovedEvent::EntityMovedEvent(Drop::Entity& initiator, Drop::Position* oldPosition) : OldPosition(oldPosition),
 		Drop::Event(initiator)
 	{}
 
 	EntityMovedEvent::~EntityMovedEvent(void)
-	{}
+	{
+		delete(OldPosition);
+	}
 }

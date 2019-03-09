@@ -13,11 +13,10 @@ namespace Drop
 	class EntityMovedEvent : public Drop::Event
 	{
 	public:
-		EntityMovedEvent(Drop::Entity& initiator, Drop::Position& position);
+		EntityMovedEvent(Drop::Entity& initiator, Drop::Position* oldPosition);
 
 		~EntityMovedEvent(void);
 
-	private:
-		const Drop::Position& position;
+		const Drop::Position* OldPosition;
 	};
 }

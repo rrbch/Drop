@@ -36,7 +36,7 @@ namespace Drop
 		OldPosition = Initiator->Position;
 		Initiator->Position = newPosition;
 
-		return new Drop::EntityMovedEvent(*Initiator, *OldPosition);
+		return new Drop::EntityMovedEvent(*Initiator, OldPosition);
 	}
 
 	// Private
