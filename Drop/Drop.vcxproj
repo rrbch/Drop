@@ -132,6 +132,7 @@
     <ClCompile Include="Source\Events\EntityMovedEvent.cpp" />
     <ClCompile Include="Source\Events\Event.cpp" />
     <ClCompile Include="Source\Events\ViewContextChangeEvent.cpp" />
+    <ClCompile Include="Source\FrameManager.cpp" />
     <ClCompile Include="Source\ViewContext.cpp" />
     <ClCompile Include="Source\ViewContextManager.cpp" />
     <ClCompile Include="Source\ExplorationViewContext.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Header\AnimationManager.h" />
     <ClInclude Include="Header\Events\EntityMovedEvent.h" />
     <ClInclude Include="Header\Events\Event.h" />
+    <ClInclude Include="Header\FrameManager.h" />
     <ClInclude Include="Header\IProcessEvents.h" />
     <ClInclude Include="Header\Events\ViewContextChangeEvent.h" />
     <ClInclude Include="Header\ExplorationViewContext.h" />

@@ -17,6 +17,7 @@
     <ClCompile Include="Source\Commands\MoveCommand.cpp" />
     <ClCompile Include="Source\Events\EntityMovedEvent.cpp" />
     <ClCompile Include="Source\Events\Event.cpp" />
+    <ClCompile Include="Source\FrameManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Game.h" />
@@ -37,6 +38,7 @@
     <ClInclude Include="Header\Commands\MoveCommand.h" />
     <ClInclude Include="Header\Commands\Command.h" />
     <ClInclude Include="Header\Events\EntityMovedEvent.h" />
+    <ClInclude Include="Header\FrameManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />

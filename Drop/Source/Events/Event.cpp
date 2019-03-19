@@ -5,6 +5,6 @@
 
 namespace Drop
 {
-	Event::~Event()
+	Event::~Event(void)
 	{ }
 }
