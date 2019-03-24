@@ -28,6 +28,11 @@
 	#include "Renderer.h"
 #endif
 
+#ifndef FrameManager_h
+	#define FrameManager_h
+	#include "FrameManager.h"
+#endif
+
 #ifndef ViewContextManager_h
 	#define ViewContextManager_h
 	#include "ViewContextManager.h"
@@ -60,6 +65,8 @@ namespace Drop
 		
 		Drop::Renderer* renderer;
 		
+		Drop::FrameManager* frameManager;
+
 		Drop::ViewContextManager* viewContextManager;
 
 		Drop::AnimationManager* animationManager;

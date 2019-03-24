@@ -33,6 +33,8 @@ namespace Drop
 		SDL_Event currentEvent;
 		while (true)
 		{
+			frameManager->StartNewFrame();
+
 			if (SDL_PollEvent(&currentEvent) == 0)
 			{
 				continue;
@@ -70,6 +72,7 @@ namespace Drop
 		window = new Drop::Window(640, 480, "Drop 0.1");
 		renderer = new Drop::Renderer(window->GetSDLWindow());
 
+		frameManager = new Drop::FrameManager(60);
 		viewContextManager = new Drop::ViewContextManager(*this);
 		animationManager = new Drop::AnimationManager(*renderer);
 
