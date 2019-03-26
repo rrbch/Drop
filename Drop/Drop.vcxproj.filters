@@ -9,7 +9,6 @@
     <ClCompile Include="Source\ViewContext.cpp" />
     <ClCompile Include="Source\Components\Position.cpp" />
     <ClCompile Include="Source\Game.cpp" />
-    <ClCompile Include="Source\Components\Sprite.cpp" />
     <ClCompile Include="Source\Entity.cpp" />
     <ClCompile Include="Source\Events\ViewContextChangeEvent.cpp" />
     <ClCompile Include="Source\AnimationManager.cpp" />
@@ -18,6 +17,7 @@
     <ClCompile Include="Source\Events\EntityMovedEvent.cpp" />
     <ClCompile Include="Source\Events\Event.cpp" />
     <ClCompile Include="Source\FrameManager.cpp" />
+    <ClCompile Include="Source\Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Game.h" />
@@ -27,7 +27,6 @@
     <ClInclude Include="Header\ViewContext.h" />
     <ClInclude Include="Header\ExplorationViewContext.h" />
     <ClInclude Include="Header\Components\Position.h" />
-    <ClInclude Include="Header\Components\Sprite.h" />
     <ClInclude Include="Header\Events\Event.h" />
     <ClInclude Include="Header\Entity.h" />
     <ClInclude Include="Header\Events\ViewContextChangeEvent.h" />
@@ -39,6 +38,7 @@
     <ClInclude Include="Header\Commands\Command.h" />
     <ClInclude Include="Header\Events\EntityMovedEvent.h" />
     <ClInclude Include="Header\FrameManager.h" />
+    <ClInclude Include="Header\Sprite.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />

@@ -126,7 +126,7 @@
   <ItemGroup>
     <ClCompile Include="Source\Commands\MoveCommand.cpp" />
     <ClCompile Include="Source\Components\Position.cpp" />
-    <ClCompile Include="Source\Components\Sprite.cpp" />
+    <ClCompile Include="Source\Sprite.cpp" />
     <ClCompile Include="Source\Entity.cpp" />
     <ClCompile Include="Source\AnimationManager.cpp" />
     <ClCompile Include="Source\Events\EntityMovedEvent.cpp" />
@@ -145,7 +145,7 @@
   <ItemGroup>
     <ClInclude Include="Header\Commands\Command.h" />
     <ClInclude Include="Header\Commands\MoveCommand.h" />
-    <ClInclude Include="Header\Components\Sprite.h" />
+    <ClInclude Include="Header\Sprite.h" />
     <ClInclude Include="Header\Entity.h" />
     <ClInclude Include="Header\AnimationManager.h" />
     <ClInclude Include="Header\Events\EntityMovedEvent.h" />

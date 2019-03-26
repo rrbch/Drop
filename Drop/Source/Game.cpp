@@ -13,6 +13,11 @@
 	#include "Rectangle.h"
 #endif
 
+#ifndef std_iostream
+	#define std_iostream
+	#include <iostream>
+#endif
+
 namespace Drop
 {
 	// Public
@@ -30,9 +35,18 @@ namespace Drop
 
 	void Game::Run(void)
 	{
+		int secondStart = 0;
+
 		SDL_Event currentEvent;
 		while (true)
 		{
+			// TODO - Move fps display logic
+			if ((SDL_GetTicks() - secondStart) >= 1000 )
+			{
+				std::cout << frameManager->GetFramesPerSecond() << std::endl;
+				secondStart = SDL_GetTicks();
+			}
+
 			frameManager->StartNewFrame();
 
 			if (SDL_PollEvent(&currentEvent) == 0)

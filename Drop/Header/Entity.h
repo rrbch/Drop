@@ -5,7 +5,7 @@
 
 #ifndef Sprite_h
 	#define Sprite_h
-	#include "Components/Sprite.h"
+	#include "Sprite.h"
 #endif
 
 namespace Drop
