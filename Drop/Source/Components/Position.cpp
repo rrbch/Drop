@@ -5,12 +5,23 @@
 
 namespace Drop
 {
+	// Public
 	Position::Position(int x, int y)
 	{
-		TexturePositionX = x;
-		TexturePositionY = y;
+		X = x;
+		Y = y;
 	}
 
 	Position::~Position(void)
 	{}
+
+	int Position::GetX(void)
+	{
+		return X;
+	}
+
+	int Position::GetY(void)
+	{
+		return Y;
+	}
 }

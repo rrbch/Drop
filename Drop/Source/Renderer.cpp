@@ -61,10 +61,10 @@ namespace Drop
 
 	void Renderer::DrawSprite(Drop::Sprite& sprite, Drop::Position& position)
 	{
-		LoadTexture(sprite.TextureName);
+		LoadTexture(sprite.GetTextureName());
 
-		Drop::Rectangle sourceRectangle = Drop::Rectangle(sprite.TexturePositionX, sprite.TexturePositionY, sprite.Width, sprite.Height);
-		Drop::Rectangle destinationRectangle = Drop::Rectangle(position.TexturePositionX * sprite.Width, position.TexturePositionY * sprite.Height, sprite.Width, sprite.Height);
+		Drop::Rectangle sourceRectangle = Drop::Rectangle(sprite.GetPositionX(), sprite.GetPositionY(), sprite.GetWidth(), sprite.GetHeight());
+		Drop::Rectangle destinationRectangle = Drop::Rectangle(position.GetX() * sprite.GetWidth(), position.GetY() * sprite.GetHeight(), sprite.GetWidth(), sprite.GetHeight());
 
 		SetDrawColor(0, 0, 0, 255);
 		Clear();

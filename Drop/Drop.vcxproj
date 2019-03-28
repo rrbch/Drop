@@ -124,6 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\AnimationFrame.cpp" />
     <ClCompile Include="Source\Commands\MoveCommand.cpp" />
     <ClCompile Include="Source\Components\Position.cpp" />
     <ClCompile Include="Source\Sprite.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="Header\ViewContext.h" />
     <ClInclude Include="Header\ViewContextManager.h" />
     <ClInclude Include="Header\Window.h" />
+    <ClInclude Include="Header\AnimationFrame.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />

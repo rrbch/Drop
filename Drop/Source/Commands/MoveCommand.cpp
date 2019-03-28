@@ -42,7 +42,7 @@ namespace Drop
 	// Private
 	Drop::Position* MoveCommand::GetNewInitiatorPosition(Drop::MoveDirection moveDirection)
 	{
-		int newXPosition = Initiator->Position->TexturePositionX;
+		int newXPosition = Initiator->Position->GetX();
 		switch (moveDirection)
 		{
 			case Drop::MoveDirection::NorthEast:
@@ -57,7 +57,7 @@ namespace Drop
 				break;
 		}
 
-		int newYPosition = Initiator->Position->TexturePositionY;
+		int newYPosition = Initiator->Position->GetY();
 		switch (moveDirection)
 		{
 			case Drop::MoveDirection::SouthEast:

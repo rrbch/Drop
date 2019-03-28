@@ -1,14 +1,19 @@
 namespace Drop
 {
-	class Position
+	struct Position
 	{
 	public:
 		Position(int x, int y);
 
 		~Position(void);
 
-		int TexturePositionX;
+		int GetX(void);
 
-		int TexturePositionY;
+		int GetY(void);
+
+	private:
+		int X;
+
+		int Y;
 	};
 }

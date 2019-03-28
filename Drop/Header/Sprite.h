@@ -5,19 +5,30 @@
 
 namespace Drop
 {
-	class Sprite
+	struct Sprite
 	{
 	public:
 		Sprite(std::string textureName, int texturePositionX, int texturePositionY, int width, int height);
 
-		std::string TextureName;
+		std::string GetTextureName(void);
 
-		int TexturePositionX;
+		int GetPositionX(void);
 
-		int TexturePositionY;
+		int GetPositionY(void);
 
-		int Width;
+		int GetWidth(void);
 
-		int Height;
+		int GetHeight(void);
+
+	private:
+		std::string textureName;
+
+		int positionX;
+
+		int positionY;
+
+		int width;
+
+		int height;
 	};
 }
