@@ -1,3 +1,8 @@
+#ifndef Game_h
+	#define Game_h
+	#include "Game.h"
+#endif
+
 #ifndef ViewContextManager_h
 	#define ViewContextManager_h
 	#include "ViewContextManager.h"
@@ -22,17 +27,20 @@ namespace Drop_UnitTests
 	public:
 		TEST_METHOD(Constructor)
 		{
-			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(nullptr);
+			Drop::Game game = Drop::Game();
+			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(game);
 		}
 		
 		TEST_METHOD(Destructor)
 		{
-			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(nullptr);
+			Drop::Game game = Drop::Game();
+			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(game);
 		}
 		
 		TEST_METHOD(ExplorationViewContextIsDefaultContext)
 		{
-			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(nullptr);
+			Drop::Game game = Drop::Game();
+			Drop::ViewContextManager viewContextManager = Drop::ViewContextManager(game);
 			Drop::ExplorationViewContext* explorationViewContext = (Drop::ExplorationViewContext*)viewContextManager.activeViewContext;
 		}
 		

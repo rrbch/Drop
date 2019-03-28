@@ -19,7 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\UnitTests\FrameManager.cpp" />
     <ClCompile Include="Source\UnitTests\Game.cpp" />
+    <ClCompile Include="Source\UnitTests\Renderer.cpp" />
+    <ClCompile Include="Source\UnitTests\Sprite.cpp" />
     <ClCompile Include="Source\UnitTests\ViewContextManager.cpp" />
     <ClCompile Include="Source\UnitTests\Window.cpp" />
   </ItemGroup>
@@ -111,7 +114,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;ExplorationViewContext.obj;Game.obj;Position.obj;Rectangle.obj;Renderer.obj;Sprite.obj;ViewContext.obj;ViewContextManager.obj;Window.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;AnimationManager.obj;Entity.obj;EntityMovedEvent.obj;Event.obj;ExplorationViewContext.obj;FrameManager.obj;Game.obj;MoveCommand.obj;Position.obj;Rectangle.obj;Renderer.obj;Sprite.obj;ViewContext.obj;ViewContextChangeEvent.obj;ViewContextManager.obj;Window.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

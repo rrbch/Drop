@@ -7,8 +7,8 @@ namespace Drop
 
 		~Position(void);
 
-		int X;
+		int TexturePositionX;
 
-		int Y;
+		int TexturePositionY;
 	};
 }

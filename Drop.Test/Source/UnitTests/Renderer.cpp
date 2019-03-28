@@ -3,26 +3,26 @@
 	#include "CppUnitTest.h"
 #endif
 
-#ifndef Game_h
-	#define Game_h
-	#include <Game.h>
+#ifndef Renderer_h
+	#define Renderer_h
+	#include <Renderer.h>
 #endif
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace Drop_UnitTests
-{		
-	TEST_CLASS(GameTests)
+{
+	TEST_CLASS(RendererTests)
 	{
 	public:
 		TEST_METHOD(Constructor)
 		{
-			Drop::Game();
+			Drop::Renderer(nullptr);
 		}
-		
+
 		TEST_METHOD(Destructor)
 		{
-			Drop::Game();
+			Drop::Renderer(nullptr);
 		}
 	};
 }

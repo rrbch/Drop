@@ -26,6 +26,8 @@ namespace Drop
 
 		int millisecondsSinceLastSecond;
 
+		void ValidateParameter(int framesPerSecond);
+
 		void InitializeFields(int framesPerSecond);
 
 		int CalculateDesiredFrameDuration(int framesPerSecond);

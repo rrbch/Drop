@@ -8,13 +8,13 @@ namespace Drop
 	class Sprite
 	{
 	public:
-		Sprite(std::string source, int x, int y, int width, int height);
+		Sprite(std::string textureName, int texturePositionX, int texturePositionY, int width, int height);
 
-		std::string Source;
+		std::string TextureName;
 
-		int X;
+		int TexturePositionX;
 
-		int Y;
+		int TexturePositionY;
 
 		int Width;
 

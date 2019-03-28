@@ -4,5 +4,8 @@
     <ClCompile Include="Source\UnitTests\Game.cpp" />
     <ClCompile Include="Source\UnitTests\Window.cpp" />
     <ClCompile Include="Source\UnitTests\ViewContextManager.cpp" />
+    <ClCompile Include="Source\UnitTests\FrameManager.cpp" />
+    <ClCompile Include="Source\UnitTests\Sprite.cpp" />
+    <ClCompile Include="Source\UnitTests\Renderer.cpp" />
   </ItemGroup>
 </Project>

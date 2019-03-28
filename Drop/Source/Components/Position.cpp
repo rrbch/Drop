@@ -7,8 +7,8 @@ namespace Drop
 {
 	Position::Position(int x, int y)
 	{
-		X = x;
-		Y = y;
+		TexturePositionX = x;
+		TexturePositionY = y;
 	}
 
 	Position::~Position(void)

@@ -3,6 +3,11 @@
 	#include <SDL.h>
 #endif
 
+#ifndef std_except
+	#define std_except
+	#include <stdexcept>
+#endif
+
 #ifndef std_chrono
 	#define std_chrono
 	#include <chrono>
@@ -23,6 +28,8 @@ namespace Drop
 	// Public
 	FrameManager::FrameManager(int framesPerSecond)
 	{
+		ValidateParameter(framesPerSecond);
+
 		InitializeFields(framesPerSecond);
 	}
 
@@ -51,6 +58,14 @@ namespace Drop
 	}
 
 	// Private
+	void FrameManager::ValidateParameter(int framesPerSecond)
+	{
+		if (framesPerSecond == 0)
+		{
+			throw std::invalid_argument("Parameter 'framesPerSecond' cannot be zero.");
+		}
+	}
+
 	void FrameManager::InitializeFields(int framesPerSecond)
 	{
 		this->framesPerSecond = framesPerSecond;
