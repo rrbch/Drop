@@ -17,7 +17,7 @@ namespace Drop
 
 		~Window(void);
 
-		SDL_Window* GetSDLWindow(void);
+		SDL_Window* SDLWindow;
 
 	private:
 		int width;
@@ -25,8 +25,6 @@ namespace Drop
 		int height;
 
 		std::string title;
-
-		SDL_Window* sDLWindow;
 
 		void InitializeSDLWindow(void);
 

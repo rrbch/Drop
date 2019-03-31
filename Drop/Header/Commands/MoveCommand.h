@@ -8,9 +8,9 @@
 	#include "Event.h"
 #endif
 
-#ifndef Position_h
-	#define Position_h
-	#include "Position.h"
+#ifndef Point_h
+	#define Point_h
+	#include "Point.h"
 #endif
 
 namespace Drop
@@ -35,15 +35,15 @@ namespace Drop
 
 		~MoveCommand(void);
 
+		Drop::Event* Command::Execute(void);
+
 		Drop::Entity* Initiator;
 
 		Drop::MoveDirection MoveDirection;
 
-		Drop::Position* OldPosition;
-
-		Drop::Event* Command::Execute(void);
+		Drop::Point* OldPosition;
 
 	private:
-		Drop::Position* GetNewInitiatorPosition(Drop::MoveDirection moveDirection);
+		Drop::Point* GetNewInitiatorPosition(Drop::MoveDirection moveDirection);
 	};
 }

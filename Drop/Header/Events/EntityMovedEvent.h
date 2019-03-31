@@ -1,11 +1,11 @@
 #ifndef Event_h
-#define Event_h
-#include "Event.h"
+	#define Event_h
+	#include "Event.h"
 #endif
 
-#ifndef Position_h
-#define Position_h
-#include "Position.h"
+#ifndef Point_h
+	#define Point_h
+	#include "Point.h"
 #endif
 
 namespace Drop
@@ -13,10 +13,10 @@ namespace Drop
 	class EntityMovedEvent : public Drop::Event
 	{
 	public:
-		EntityMovedEvent(Drop::Entity& initiator, Drop::Position* oldPosition);
+		EntityMovedEvent(Drop::Entity& initiator, Drop::Point* oldPosition);
 
 		~EntityMovedEvent(void);
 
-		const Drop::Position* OldPosition;
+		const Drop::Point* OldPosition;
 	};
 }

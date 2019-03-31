@@ -124,9 +124,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\AnimationFrame.cpp" />
+    <ClCompile Include="Source\Animation.cpp" />
     <ClCompile Include="Source\Commands\MoveCommand.cpp" />
-    <ClCompile Include="Source\Components\Position.cpp" />
+    <ClCompile Include="Source\Point.cpp" />
     <ClCompile Include="Source\Sprite.cpp" />
     <ClCompile Include="Source\Entity.cpp" />
     <ClCompile Include="Source\AnimationManager.cpp" />
@@ -144,6 +144,7 @@
     <ClCompile Include="Source\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Animation.h" />
     <ClInclude Include="Header\Commands\Command.h" />
     <ClInclude Include="Header\Commands\MoveCommand.h" />
     <ClInclude Include="Header\Sprite.h" />
@@ -156,14 +157,13 @@
     <ClInclude Include="Header\Events\ViewContextChangeEvent.h" />
     <ClInclude Include="Header\ExplorationViewContext.h" />
     <ClInclude Include="Header\Game.h" />
-    <ClInclude Include="Header\Components\Position.h" />
+    <ClInclude Include="Header\Point.h" />
     <ClInclude Include="Header\IQueueEvents.h" />
     <ClInclude Include="Header\Rectangle.h" />
     <ClInclude Include="Header\Renderer.h" />
     <ClInclude Include="Header\ViewContext.h" />
     <ClInclude Include="Header\ViewContextManager.h" />
     <ClInclude Include="Header\Window.h" />
-    <ClInclude Include="Header\AnimationFrame.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />

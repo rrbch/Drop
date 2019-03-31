@@ -8,9 +8,9 @@
 	#include "Events/Event.h"
 #endif
 
-#ifndef Position_h
-	#define Position_h
-	#include "Position.h"
+#ifndef Point_h
+	#define Point_h
+	#include "Point.h"
 #endif
 
 #ifndef EntityMovedEvent_h
@@ -31,7 +31,7 @@ namespace Drop
 	{
 		// TODO - Validate new position.
 
-		Drop::Position* newPosition = GetNewInitiatorPosition(MoveDirection);
+		Drop::Point* newPosition = GetNewInitiatorPosition(MoveDirection);
 
 		OldPosition = Initiator->Position;
 		Initiator->Position = newPosition;
@@ -40,9 +40,9 @@ namespace Drop
 	}
 
 	// Private
-	Drop::Position* MoveCommand::GetNewInitiatorPosition(Drop::MoveDirection moveDirection)
+	Drop::Point* MoveCommand::GetNewInitiatorPosition(Drop::MoveDirection moveDirection)
 	{
-		int newXPosition = Initiator->Position->GetX();
+		int newXPosition = Initiator->Position->X;
 		switch (moveDirection)
 		{
 			case Drop::MoveDirection::NorthEast:
@@ -57,7 +57,7 @@ namespace Drop
 				break;
 		}
 
-		int newYPosition = Initiator->Position->GetY();
+		int newYPosition = Initiator->Position->Y;
 		switch (moveDirection)
 		{
 			case Drop::MoveDirection::SouthEast:
@@ -72,6 +72,6 @@ namespace Drop
 				break;
 		}
 
-		return new Drop::Position(newXPosition, newYPosition);
+		return new Drop::Point(newXPosition, newYPosition);
 	}
 }

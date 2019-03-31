@@ -3,9 +3,9 @@
 	#include "ExplorationViewContext.h"
 #endif
 
-#ifndef Position_h
-	#define Position_h
-	#include "Components/Position.h"
+#ifndef Point_h
+	#define Point_h
+	#include "Point.h"
 #endif
 
 #ifndef Sprite_h
@@ -20,11 +20,12 @@ namespace Drop
 	{
 		moveCommand = new MoveCommand();
 
-		Drop::Position* playerPosition = new Drop::Position(0, 0);
+		Drop::Point* playerPosition = new Drop::Point(0, 0);
+
+		Drop:Point* playerSpritePosition = new Point(16, 64);
 		Drop::Sprite* playerSprite = new Drop::Sprite(
 			"C:\\Users\\Niklas\\source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png",
-			16,
-			64,
+			playerSpritePosition,
 			16,
 			16
 		);

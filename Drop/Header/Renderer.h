@@ -23,9 +23,9 @@
 	#include "Sprite.h"
 #endif
 
-#ifndef Position_h
-	#define Position_h
-	#include "Components/Position.h"
+#ifndef Point_h
+	#define Point_h
+	#include "Point.h"
 #endif
 
 namespace Drop
@@ -47,7 +47,7 @@ namespace Drop
 
 		void Present(void);
 
-		void DrawSprite(Drop::Sprite& sprite, Drop::Position& oldPosition);
+		void DrawSprite(Drop::Sprite& sprite, Drop::Point oldPosition);
 
 	private:
 		SDL_Window* sDLWindow;

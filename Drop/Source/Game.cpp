@@ -84,7 +84,7 @@ namespace Drop
 		eventQueue = new std::queue<Event*>();
 
 		window = new Drop::Window(640, 480, "Drop 0.1");
-		renderer = new Drop::Renderer(window->GetSDLWindow());
+		renderer = new Drop::Renderer(window->SDLWindow);
 
 		frameManager = new Drop::FrameManager(60);
 		viewContextManager = new Drop::ViewContextManager(*this);

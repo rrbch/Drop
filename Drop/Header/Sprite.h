@@ -3,32 +3,26 @@
 	#include <string>
 #endif
 
+#ifndef Point_h
+	#define Point_h
+	#include "Point.h"
+#endif
+
 namespace Drop
 {
 	struct Sprite
 	{
 	public:
-		Sprite(std::string textureName, int texturePositionX, int texturePositionY, int width, int height);
+		Sprite(std::string textureName, Drop::Point* position, int width, int height);
 
-		std::string GetTextureName(void);
+		~Sprite(void);
 
-		int GetPositionX(void);
+		const std::string TextureName;
 
-		int GetPositionY(void);
+		Drop::Point* Position;
 
-		int GetWidth(void);
+		int Width;
 
-		int GetHeight(void);
-
-	private:
-		std::string textureName;
-
-		int positionX;
-
-		int positionY;
-
-		int width;
-
-		int height;
+		int Height;
 	};
 }

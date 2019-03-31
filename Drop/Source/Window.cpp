@@ -20,15 +20,10 @@ namespace Drop
 		DestroySDLWindow();
 	}
 
-	SDL_Window* Window::GetSDLWindow(void)
-	{
-		return sDLWindow;
-	}
-
 	// Private
 	void Window::InitializeSDLWindow(void)
 	{
-		sDLWindow = SDL_CreateWindow(
+		SDLWindow = SDL_CreateWindow(
 			title.c_str(),
 			SDL_WINDOWPOS_UNDEFINED,
 			SDL_WINDOWPOS_UNDEFINED,
@@ -40,6 +35,6 @@ namespace Drop
 
 	void Window::DestroySDLWindow(void)
 	{
-		SDL_DestroyWindow(sDLWindow);
+		SDL_DestroyWindow(SDLWindow);
 	}
 }

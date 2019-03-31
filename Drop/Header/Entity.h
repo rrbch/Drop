@@ -1,6 +1,6 @@
-#ifndef Position_h
-	#define Position_h
-	#include "Components/Position.h"
+#ifndef Point_h
+	#define Point_h
+	#include "Point.h"
 #endif
 
 #ifndef Sprite_h
@@ -13,12 +13,12 @@ namespace Drop
 	class Entity
 	{
 	public:
-		Entity(Position* oldPosition, Sprite* sprite);
+		Entity(Drop::Point* position, Drop::Sprite* sprite);
 
 		~Entity(void);
 
-		Position* Position;
+		Drop::Point* Position;
 
-		Sprite* Sprite;
+		Drop::Sprite* Sprite;
 	};
 }

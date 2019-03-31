@@ -3,6 +3,11 @@
 	#include "Renderer.h"
 #endif
 
+#ifndef Point_h
+	#define Point_h
+	#include "Point.h"
+#endif
+
 namespace Drop
 {
 	// Public
@@ -59,12 +64,12 @@ namespace Drop
 		SDL_RenderPresent(sDLRenderer);
 	}
 
-	void Renderer::DrawSprite(Drop::Sprite& sprite, Drop::Position& position)
+	void Renderer::DrawSprite(Drop::Sprite& sprite, Drop::Point position)
 	{
-		LoadTexture(sprite.GetTextureName());
+		LoadTexture(sprite.TextureName);
 
-		Drop::Rectangle sourceRectangle = Drop::Rectangle(sprite.GetPositionX(), sprite.GetPositionY(), sprite.GetWidth(), sprite.GetHeight());
-		Drop::Rectangle destinationRectangle = Drop::Rectangle(position.GetX() * sprite.GetWidth(), position.GetY() * sprite.GetHeight(), sprite.GetWidth(), sprite.GetHeight());
+		Drop::Rectangle sourceRectangle = Drop::Rectangle(sprite.Position->X, sprite.Position->Y, sprite.Width, sprite.Height);
+		Drop::Rectangle destinationRectangle = Drop::Rectangle(position.X * sprite.Width, position.Y * sprite.Height, sprite.Width, sprite.Height);
 
 		SetDrawColor(0, 0, 0, 255);
 		Clear();
