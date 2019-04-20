@@ -23,6 +23,7 @@
     <ClCompile Include="Source\UnitTests\Game.cpp" />
     <ClCompile Include="Source\UnitTests\Renderer.cpp" />
     <ClCompile Include="Source\UnitTests\Sprite.cpp" />
+    <ClCompile Include="Source\UnitTests\TextureManager.cpp" />
     <ClCompile Include="Source\UnitTests\ViewContextManager.cpp" />
     <ClCompile Include="Source\UnitTests\Window.cpp" />
   </ItemGroup>
@@ -90,8 +91,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Niklas\source\repos\Drop\Drop.Test\Dependencies\Include;C:\Users\Niklas\source\repos\Drop\Drop\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Niklas\source\repos\Drop\Drop.Test\Dependencies\Libraries;C:\Users\Niklas\source\repos\Drop\Drop\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>B:\Source\repos\Drop\Drop.Test\Dependencies\Include;B:\Source\repos\Drop\Drop\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>B:\Source\repos\Drop\Drop.Test\Dependencies\Libraries;B:\Source\repos\Drop\Drop\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -114,7 +115,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;AnimationManager.obj;Entity.obj;EntityMovedEvent.obj;Event.obj;ExplorationViewContext.obj;FrameManager.obj;Game.obj;MoveCommand.obj;Position.obj;Rectangle.obj;Renderer.obj;Sprite.obj;ViewContext.obj;ViewContextChangeEvent.obj;ViewContextManager.obj;Window.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;Animation.obj;AnimationManager.obj;Entity.obj;EntityMovedEvent.obj;Event.obj;ExplorationViewContext.obj;FrameManager.obj;Game.obj;MoveCommand.obj;Point.obj;Rectangle.obj;Renderer.obj;Sprite.obj;TextureManager.obj;ViewContext.obj;ViewContextChangeEvent.obj;ViewContextManager.obj;Window.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

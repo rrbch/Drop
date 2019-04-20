@@ -20,15 +20,10 @@ namespace Drop_UnitTests
 			Drop::Window(0, 0, "");
 		}
 	
-		TEST_METHOD(Destructor)
-		{
-			Drop::Window(0, 0, "");
-		}
-	
 		TEST_METHOD(GetSDLWindow)
 		{
 			Drop::Window window = Drop::Window(0, 0, "title");
-			window.GetSDLWindow();
+			window.SDLWindow;
 		}
 	};
 }

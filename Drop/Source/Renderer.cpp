@@ -29,7 +29,7 @@ namespace Drop
 	void Renderer::LoadTexture(std::string filePath)
 	{
 		loadedSDLTexture = IMG_LoadTexture(
-			sDLRenderer,
+			SDLRenderer,
 			filePath.c_str()
 		);
 	}
@@ -37,7 +37,7 @@ namespace Drop
 	void Renderer::SetDrawColor(uint8_t redValue, uint8_t greenValue, uint8_t blueValue, uint8_t alphaValue)
 	{
 		SDL_SetRenderDrawColor(
-			sDLRenderer,
+			SDLRenderer,
 			redValue,
 			greenValue,
 			blueValue,
@@ -46,13 +46,13 @@ namespace Drop
 
 	void Renderer::Clear(void)
 	{
-		SDL_RenderClear(sDLRenderer);
+		SDL_RenderClear(SDLRenderer);
 	}
 
 	void Renderer::Copy(Rectangle sourceRactangle, Rectangle destinationRectangle)
 	{
 		SDL_RenderCopy(
-			sDLRenderer,
+			SDLRenderer,
 			loadedSDLTexture,
 			&sourceRactangle.GetSDLRectangle(),
 			&destinationRectangle.GetSDLRectangle()
@@ -61,7 +61,7 @@ namespace Drop
 
 	void Renderer::Present(void)
 	{
-		SDL_RenderPresent(sDLRenderer);
+		SDL_RenderPresent(SDLRenderer);
 	}
 
 	void Renderer::DrawSprite(Drop::Sprite& sprite, Drop::Point position)
@@ -93,7 +93,7 @@ namespace Drop
 
 	void Renderer::InitializeSDLRenderer(void)
 	{
-		sDLRenderer = SDL_CreateRenderer(
+		SDLRenderer = SDL_CreateRenderer(
 			sDLWindow,
 			-1,
 			SDL_RENDERER_ACCELERATED);
@@ -101,7 +101,7 @@ namespace Drop
 
 	void Renderer::DestroySDLRenderer(void)
 	{
-		SDL_DestroyRenderer(sDLRenderer);
+		SDL_DestroyRenderer(SDLRenderer);
 	}
 
 	void Renderer::DestroySDLTexture(void)

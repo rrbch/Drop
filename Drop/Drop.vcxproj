@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Niklas\source\repos\Drop\Drop\Dependencies\Include;C:\Users\Niklas\source\repos\Drop\Drop\Header;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Niklas\source\repos\Drop\Drop\Dependencies\Libraries;$(LibraryPath)</LibraryPath>
+    <IncludePath>B:\Source\repos\Drop\Drop\Dependencies\Include;B:\Source\repos\Drop\Drop\Header;$(IncludePath)</IncludePath>
+    <LibraryPath>B:\Source\repos\Drop\Drop\Dependencies\Libraries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -134,6 +134,7 @@
     <ClCompile Include="Source\Events\Event.cpp" />
     <ClCompile Include="Source\Events\ViewContextChangeEvent.cpp" />
     <ClCompile Include="Source\FrameManager.cpp" />
+    <ClCompile Include="Source\TextureManager.cpp" />
     <ClCompile Include="Source\ViewContext.cpp" />
     <ClCompile Include="Source\ViewContextManager.cpp" />
     <ClCompile Include="Source\ExplorationViewContext.cpp" />
@@ -145,11 +146,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Animation.h" />
+    <ClInclude Include="Header\AnimationManager.h" />
     <ClInclude Include="Header\Commands\Command.h" />
     <ClInclude Include="Header\Commands\MoveCommand.h" />
     <ClInclude Include="Header\Sprite.h" />
     <ClInclude Include="Header\Entity.h" />
-    <ClInclude Include="Header\AnimationManager.h" />
     <ClInclude Include="Header\Events\EntityMovedEvent.h" />
     <ClInclude Include="Header\Events\Event.h" />
     <ClInclude Include="Header\FrameManager.h" />
@@ -161,6 +162,7 @@
     <ClInclude Include="Header\IQueueEvents.h" />
     <ClInclude Include="Header\Rectangle.h" />
     <ClInclude Include="Header\Renderer.h" />
+    <ClInclude Include="Header\TextureManager.h" />
     <ClInclude Include="Header\ViewContext.h" />
     <ClInclude Include="Header\ViewContextManager.h" />
     <ClInclude Include="Header\Window.h" />

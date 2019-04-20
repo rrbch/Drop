@@ -19,6 +19,7 @@
     <ClCompile Include="Source\Sprite.cpp" />
     <ClCompile Include="Source\Point.cpp" />
     <ClCompile Include="Source\Animation.cpp" />
+    <ClCompile Include="Source\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Game.h" />
@@ -31,7 +32,6 @@
     <ClInclude Include="Header\Entity.h" />
     <ClInclude Include="Header\Events\ViewContextChangeEvent.h" />
     <ClInclude Include="Header\ViewContextManager.h" />
-    <ClInclude Include="Header\AnimationManager.h" />
     <ClInclude Include="Header\IProcessEvents.h" />
     <ClInclude Include="Header\IQueueEvents.h" />
     <ClInclude Include="Header\Commands\MoveCommand.h" />
@@ -41,6 +41,8 @@
     <ClInclude Include="Header\Sprite.h" />
     <ClInclude Include="Header\Point.h" />
     <ClInclude Include="Header\Animation.h" />
+    <ClInclude Include="Header\TextureManager.h" />
+    <ClInclude Include="Header\AnimationManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\RogueYun_SimpleMood_tileset.png" />

@@ -3,6 +3,11 @@
 	#include "AnimationManager.h"
 #endif
 
+#ifndef Renderer_h	
+	#define Renderer_h	
+	#include "Renderer.h"
+#endif
+
 #ifndef EntityMovedEvent_h
 	#define EntityMovedEvent_h
 	#include "Events/EntityMovedEvent.h"
@@ -10,9 +15,10 @@
 
 namespace Drop
 {
+	// Public
 	AnimationManager::AnimationManager(Drop::Renderer& renderer) : renderer(renderer)
 	{
-		renderer.LoadTexture("C:\\Users\\Niklas\\source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png");
+		renderer.LoadTexture("B:\\Source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png");
 
 		renderer.SetDrawColor(0, 0, 0, 0);
 		renderer.Present();

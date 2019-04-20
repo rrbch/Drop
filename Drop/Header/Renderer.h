@@ -37,6 +37,8 @@ namespace Drop
 
 		~Renderer(void);
 
+		SDL_Renderer* SDLRenderer;
+
 		void LoadTexture(std::string filePath);
 
 		void SetDrawColor(uint8_t redValue, uint8_t greenValue, uint8_t blueValue, uint8_t alphaValue);
@@ -51,8 +53,6 @@ namespace Drop
 
 	private:
 		SDL_Window* sDLWindow;
-
-		SDL_Renderer* sDLRenderer;
 
 		SDL_Texture* loadedSDLTexture;
 

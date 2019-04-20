@@ -7,5 +7,6 @@
     <ClCompile Include="Source\UnitTests\FrameManager.cpp" />
     <ClCompile Include="Source\UnitTests\Sprite.cpp" />
     <ClCompile Include="Source\UnitTests\Renderer.cpp" />
+    <ClCompile Include="Source\UnitTests\TextureManager.cpp" />
   </ItemGroup>
 </Project>

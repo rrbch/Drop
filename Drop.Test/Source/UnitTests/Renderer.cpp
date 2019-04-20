@@ -19,10 +19,5 @@ namespace Drop_UnitTests
 		{
 			Drop::Renderer(nullptr);
 		}
-
-		TEST_METHOD(Destructor)
-		{
-			Drop::Renderer(nullptr);
-		}
 	};
 }

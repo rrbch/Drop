@@ -26,11 +26,6 @@ namespace Drop_UnitTests
 			Assert::ExpectException<std::invalid_argument>(constructorCall);
 		}
 
-		TEST_METHOD(Destructor)
-		{
-			Drop::FrameManager frameManager = Drop::FrameManager(1);
-		}
-
 		TEST_METHOD(StartNewFrame)
 		{
 			Drop::FrameManager frameManager = Drop::FrameManager(1);

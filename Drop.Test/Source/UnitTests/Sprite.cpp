@@ -22,12 +22,8 @@ namespace Drop_UnitTests
 	public:
 		TEST_METHOD(Constructor)
 		{
-			Drop::Sprite("", 0, 0, 0, 0);
-		}
-
-		TEST_METHOD(Destructor)
-		{
-			Drop::Sprite("", 0, 0, 0, 0);
+			Drop::Point* spritePosition = new Drop::Point(0, 0);
+			Drop::Sprite("", spritePosition, 0, 0);
 		}
 	};
 }

@@ -22,7 +22,7 @@ namespace Drop
 
 		Drop::Point* playerPosition = new Drop::Point(0, 0);
 
-		Drop:Point* playerSpritePosition = new Point(16, 64);
+		Drop::Point* playerSpritePosition = new Point(16, 64);
 		Drop::Sprite* playerSprite = new Drop::Sprite(
 			"C:\\Users\\Niklas\\source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png",
 			playerSpritePosition,

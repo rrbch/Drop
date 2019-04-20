@@ -19,10 +19,5 @@ namespace Drop_UnitTests
 		{
 			Drop::Game();
 		}
-		
-		TEST_METHOD(Destructor)
-		{
-			Drop::Game();
-		}
 	};
 }
