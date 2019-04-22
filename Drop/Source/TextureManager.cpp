@@ -41,8 +41,20 @@ namespace Drop
 	{
 		// TODO - Validate texture name and handle missing textures.
 
-		SDL_Texture* texture = TryFindTexture(renderer, textureName);
-		AddSDLTexture(sDLTextures, textureName, texture);
+		SDL_Texture* texture;
+		if (ContainsTexture(sDLTextures, textureName))
+		{
+			texture = sDLTextures->at(textureName);
+		}
+		else
+		{
+			// TODO - Handle not found textures
+			texture = TryFindTexture(renderer, textureName);
+			if (texture != nullptr)
+			{
+				AddSDLTexture(sDLTextures, textureName, texture);
+			}
+		}
 
 		return texture;
 	}
@@ -54,6 +66,11 @@ namespace Drop
 		{
 			SDL_DestroyTexture(keySDLTexturePair.second);
 		}
+	}
+
+	bool TextureManager::ContainsTexture(std::map<std::string, SDL_Texture*>* sDLTextures, std::string textureName)
+	{
+		return sDLTextures->count(textureName) == 1;
 	}
 
 	SDL_Texture* TextureManager::TryFindTexture(Drop::Renderer* renderer, std::string textureName)

@@ -41,7 +41,7 @@ namespace Drop_UnitTests
 			Drop::Renderer* renderer = new Drop::Renderer(window->SDLWindow);
 
 			auto textureManager = Drop::TextureManager();
-			SDL_Texture* texture = textureManager.GetTexture(renderer, "RogueYun_SimpleMood_tileset.png");
+			SDL_Texture* texture = textureManager.GetTexture(renderer, "B:\\Source\\repos\\Drop\\Drop\\Resources\\RogueYun_SimpleMood_tileset.png");
 
 			SDL_DestroyTexture(texture);
 		}

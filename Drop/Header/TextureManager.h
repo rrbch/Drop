@@ -34,6 +34,8 @@ namespace Drop
 
 		void DestroySDLTextures(std::map<std::string, SDL_Texture*>* sDLTextures);
 
+		bool ContainsTexture(std::map<std::string, SDL_Texture*>* sDLTextures, std::string textureName);
+
 		SDL_Texture* TryFindTexture(Drop::Renderer* renderer, std::string textureName);
 
 		void AddSDLTexture(std::map<std::string, SDL_Texture*>* sDLTextures, std::string textureName, SDL_Texture* sDLTextureToAdd);
